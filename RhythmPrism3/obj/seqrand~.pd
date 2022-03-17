@@ -102,7 +102,7 @@
 #X connect 8 0 1 0;
 #X connect 9 0 4 0;
 #X restore 106 304 pd *+line~;
-#N canvas 0 0 450 300 *+line~ 0;
+#N canvas 111 150 450 300 *+line~ 0;
 #X obj 134 10 inlet~;
 #X msg 207 40 \$1 2;
 #X obj 207 63 line~;
@@ -163,7 +163,7 @@
 #X obj 993 139 - 1;
 #X obj 10 105 cnv 15 20 20 empty \$1in-r A 4 9 0 12 #dfdfdf #7c7c7c
 0;
-#X obj 90 189 cnv 15 20 20 empty \$1index 27\\\  4 9 0 12 #dfdfdf #7c7c7c
+#X obj 90 189 cnv 15 20 20 empty \$1index 11\  4 9 0 12 #dfdfdf #7c7c7c
 0;
 #X obj 350 517 s \$1index;
 #X msg 350 493 label \$1\\\ ;
@@ -171,7 +171,7 @@
 #X obj 156 242 pow 2;
 #X obj 566 523 int;
 #X obj 566 573 s \$1weight;
-#X obj 170 189 cnv 15 20 20 empty \$1weight 38% 4 9 0 12 #dfdfdf #7c7c7c
+#X obj 170 189 cnv 15 20 20 empty \$1weight 13% 4 9 0 12 #dfdfdf #7c7c7c
 0;
 #X obj 566 494 * 100;
 #X msg 566 549 label \$1%;
@@ -207,7 +207,7 @@
 #X floatatom 212 501 5 0 0 0 - - - 0;
 #X obj 212 451 + 0;
 #X msg 212 426 1;
-#X obj 410 83 abs/vslidermem \$1-weight+ + 0.5 20 80;
+#X obj 190 83 abs/vslidermem \$1-weight+ + 0.5 20 80;
 #X obj 170 83 abs/vslidermem \$1-weightx x 0 20 80;
 #X obj 110 84 abs/vslidermem \$1-del+ + 0.1 20 80;
 #X obj 90 84 abs/vslidermem \$1delx x 0 20 80;

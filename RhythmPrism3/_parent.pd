@@ -11,3 +11,7 @@
 #X text 1100 580 range~ is not efficient with cpu load. Consider a
 toggle to show/hide the display.;
 #X text 1101 627 key toggles need an initialization state;
+#X obj 590 371 obj/shiftreg~ 3num;
+#X obj 586 147 obj/temperament~ 4num;
+#X obj 310 284 obj/triggate~ 5num;
+#X obj 446 441 obj/vco~ 6num;
