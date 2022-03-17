@@ -1,0 +1,20 @@
+#N canvas 97 94 436 447 12;
+#X obj 10 8 inlet~ cv+;
+#X obj 10 42 cnv 15 120 20 empty empty offset~ 2 9 0 12 #dfdfdf #606060
+0;
+#X obj 16 314 outlet~;
+#X obj 16 280 +~;
+#X msg 33 230 \$1 2;
+#X obj 33 255 line~;
+#X floatatom 72 132 5 0 0 0 - - - 0;
+#X obj 110 44 cnv 15 20 20 empty \$1offset-disp-r 0V 4 9 0 12 #dfdfdf
+#7c7c7c 0;
+#X obj 155 7 inlet~ cv+;
+#X obj 10 43 abs/hslidermem \$1numoffset + 0 100 20;
+#X connect 0 0 3 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 1;
+#X connect 8 0 3 1;
+#X connect 9 0 4 0;
+#X coords 0 -1 1 1 120 25 2 10 40;

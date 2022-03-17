@@ -1,0 +1,201 @@
+#N canvas -2 1072 1070 650 12;
+#X obj 70 546 midifile;
+#X msg 195 466 flush;
+#X obj 10 12 cnv 15 480 133 empty empty midigen~\\\ MIDI\\\ FILE\\\ MAKER
+2 9 0 12 #dfdfdf #606060 0;
+#X obj 11 33 cnv 15 38 20 empty empty 1cv+ 4 9 0 12 #404040 #dfdfdf
+0;
+#X obj 51 33 cnv 15 38 20 empty empty 2cv+ 4 9 0 12 #404040 #dfdfdf
+0;
+#X obj 91 33 cnv 15 38 20 empty empty 3gt- 4 9 0 12 #404040 #dfdfdf
+0;
+#X obj 559 174 samphold~;
+#X obj 273 125 cnv 15 78 20 empty empty file 4 9 0 12 #dfdfdf #7c7c7c
+0;
+#X obj 622 10 inlet~ v/0;
+#X obj 699 10 inlet~ amp;
+#X obj 10 54 cnv 15 78 20 empty \$1-ch1note n52 4 9 0 12 #dfdfdf #7c7c7c
+0;
+#X obj 559 394 s \$1-ch1note;
+#X obj 559 199 snapshot~;
+#X obj 533 87 bang~;
+#X msg 559 369 label n\$1;
+#X obj 559 309 * 120;
+#X obj 559 334 int;
+#X obj 654 174 samphold~;
+#X obj 654 228 snapshot~;
+#X obj 654 302 change;
+#X obj 776 10 inlet~ gate;
+#X obj 654 278 int;
+#X obj 701 350 sel 0;
+#X obj 654 481 pack f f f;
+#X msg 733 375 143;
+#X msg 701 375 127;
+#X text 768 375 channel number;
+#X obj 654 253 * 100;
+#X msg 654 508 \$3 \$2 \$1;
+#X obj 789 316 f 1;
+#X obj 741 414 +;
+#X obj 772 463 f;
+#X obj 911 34 loadbang;
+#X msg 70 467 stop;
+#X msg 233 501 verbose 2;
+#X obj 1585 39 *~ 96;
+#X obj 1585 64 wrap~ 0 1;
+#X obj 1607 97 env~;
+#X floatatom 1607 122 5 0 0 0 - - - 0;
+#X obj 861 173 env~;
+#X floatatom 861 198 5 0 0 0 - - - 0;
+#X obj 1672 119 print~;
+#X floatatom 719 275 5 0 0 0 - - - 0;
+#X floatatom 588 236 5 0 0 0 - - - 0;
+#X obj 736 324 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 492 439 env~;
+#X obj 654 199 *~;
+#X obj 533 112 t b b;
+#X obj 559 284 f;
+#X obj 654 327 t f b f;
+#X obj 70 500 metro 0.125 90 permin;
+#X obj 131 33 cnv 15 38 20 empty empty 4cv+ 4 9 0 12 #404040 #dfdfdf
+0;
+#X obj 171 33 cnv 15 38 20 empty empty 5cv+ 4 9 0 12 #404040 #dfdfdf
+0;
+#X obj 211 33 cnv 15 38 20 empty empty 6gt- 4 9 0 12 #404040 #dfdfdf
+0;
+#X obj 51 54 cnv 15 78 20 empty \$1-ch1velo v100 4 9 0 12 #dfdfdf #7c7c7c
+0;
+#X obj 559 442 s \$1-ch1velo;
+#X obj 91 54 cnv 15 20 20 empty \$1-ch1gate X 4 9 0 12 #dfdfdf #7c7c7c
+0;
+#X msg 559 417 label v\$1;
+#X obj 492 565 s \$1-ch1gate;
+#X obj 492 465 > 0;
+#X obj 492 490 sel 0 1;
+#X msg 492 540 label _;
+#X msg 515 514 label X;
+#X listbox 312 124 15 0 0 0 - - - 0;
+#X obj 120 266 f \$1;
+#X obj 120 241 loadbang;
+#X obj 128 214 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 772 488 pack f s;
+#X obj 455 77 vradio 32 1 0 2 \$1-rec-s \$1-rec-r REC 8 48 0 10 #606060
+#dfdfdf #ffffff 0;
+#X obj 113 352 r \$1-rec-s;
+#X obj 113 377 sel 1 0;
+#X obj 113 466 s \$1-rec-r;
+#X msg 135 440 label REC \, label_pos 8 48;
+#X msg 113 414 label STOP \, label_pos 4 16;
+#X msg 772 519 track \$1 \, write ../\$2.mid 8;
+#X msg 120 289 symbol gench\$1;
+#X obj 420 125 cnv 15 20 20 empty empty .mid 4 9 0 12 #dfdfdf #7c7c7c
+0;
+#X obj 131 54 cnv 15 78 20 empty \$1-ch2note n54 4 9 0 12 #dfdfdf #7c7c7c
+0;
+#X obj 172 54 cnv 15 78 20 empty \$1-ch2velo v0 4 9 0 12 #dfdfdf #7c7c7c
+0;
+#X obj 212 54 cnv 15 20 20 empty \$1-ch2gate _ 4 9 0 12 #dfdfdf #7c7c7c
+0;
+#X obj 252 33 cnv 15 38 20 empty empty 7cv+ 4 9 0 12 #404040 #dfdfdf
+0;
+#X obj 292 33 cnv 15 38 20 empty empty 8cv+ 4 9 0 12 #404040 #dfdfdf
+0;
+#X obj 332 33 cnv 15 38 20 empty empty 9gt- 4 9 0 12 #404040 #dfdfdf
+0;
+#X obj 251 54 cnv 15 78 20 empty \$1-ch3note n54 4 9 0 12 #dfdfdf #7c7c7c
+0;
+#X obj 372 33 cnv 15 38 20 empty empty 10cv+ 4 9 0 12 #404040 #dfdfdf
+0;
+#X obj 412 33 cnv 15 38 20 empty empty 11cv+ 4 9 0 12 #404040 #dfdfdf
+0;
+#X obj 452 33 cnv 15 38 20 empty empty 12gt- 4 9 0 12 #404040 #dfdfdf
+0;
+#X obj 292 54 cnv 15 78 20 empty \$1-ch3velo v0 4 9 0 12 #dfdfdf #7c7c7c
+0;
+#X obj 332 54 cnv 15 20 20 empty \$1-ch3gate _ 4 9 0 12 #dfdfdf #7c7c7c
+0;
+#X obj 372 54 cnv 15 78 20 empty \$1-ch4note n54 4 9 0 12 #dfdfdf #7c7c7c
+0;
+#X obj 413 54 cnv 15 78 20 empty \$1-ch4velo v0 4 9 0 12 #dfdfdf #7c7c7c
+0;
+#X obj 453 54 cnv 15 20 20 empty \$1-ch4gate _ 4 9 0 12 #dfdfdf #7c7c7c
+0;
+#X obj 10 125 cnv 15 40 20 empty empty 1-cv+ 4 9 0 12 #404040 #dfdfdf
+0;
+#X obj 1585 14 inl~ trigger(subdivision);
+#X connect 1 0 0 0;
+#X connect 6 0 12 0;
+#X connect 8 0 6 0;
+#X connect 9 0 17 0;
+#X connect 12 0 43 0;
+#X connect 12 0 48 1;
+#X connect 13 0 47 0;
+#X connect 14 0 11 0;
+#X connect 15 0 16 0;
+#X connect 16 0 14 0;
+#X connect 16 0 23 1;
+#X connect 17 0 39 0;
+#X connect 17 0 46 0;
+#X connect 18 0 27 0;
+#X connect 18 0 42 0;
+#X connect 19 0 44 0;
+#X connect 19 0 49 0;
+#X connect 19 0 57 0;
+#X connect 20 0 6 1;
+#X connect 20 0 17 1;
+#X connect 20 0 45 0;
+#X connect 20 0 46 1;
+#X connect 21 0 19 0;
+#X connect 22 0 25 0;
+#X connect 22 1 24 0;
+#X connect 23 0 28 0;
+#X connect 24 0 30 0;
+#X connect 25 0 30 0;
+#X connect 27 0 21 0;
+#X connect 28 0 0 0;
+#X connect 29 0 30 1;
+#X connect 29 0 31 1;
+#X connect 30 0 23 2;
+#X connect 31 0 67 0;
+#X connect 32 0 29 0;
+#X connect 33 0 50 0;
+#X connect 34 0 0 0;
+#X connect 35 0 36 0;
+#X connect 36 0 37 0;
+#X connect 36 0 41 0;
+#X connect 37 0 38 0;
+#X connect 39 0 40 0;
+#X connect 45 0 59 0;
+#X connect 46 0 18 0;
+#X connect 47 0 12 0;
+#X connect 47 1 18 0;
+#X connect 48 0 15 0;
+#X connect 49 0 23 0;
+#X connect 49 1 48 0;
+#X connect 49 2 22 0;
+#X connect 50 0 0 0;
+#X connect 57 0 55 0;
+#X connect 59 0 60 0;
+#X connect 60 0 61 0;
+#X connect 60 1 62 0;
+#X connect 61 0 58 0;
+#X connect 62 0 58 0;
+#X connect 64 0 75 0;
+#X connect 65 0 64 0;
+#X connect 66 0 64 0;
+#X connect 67 0 74 0;
+#X connect 69 0 70 0;
+#X connect 70 0 73 0;
+#X connect 70 0 50 0;
+#X connect 70 0 31 0;
+#X connect 70 1 72 0;
+#X connect 70 1 33 0;
+#X connect 70 1 1 0;
+#X connect 72 0 71 0;
+#X connect 73 0 71 0;
+#X connect 74 0 0 0;
+#X connect 75 0 63 0;
+#X connect 75 0 67 1;
+#X connect 93 0 35 0;
+#X coords 0 -1 1 1 480 138 1 10 10;

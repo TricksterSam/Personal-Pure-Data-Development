@@ -1,0 +1,177 @@
+#N canvas 8 98 1261 748 12;
+#X obj 10 42 cnv 15 200 103 empty empty envel~\ ENVELOPE\ GENERATOR
+2 9 0 12 #dfdfdf #606060 0;
+#X obj 300 42 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 300 52 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 300 62 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 300 72 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 300 82 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 300 92 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 300 102 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 300 112 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 300 122 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 300 132 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 270 42 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 270 63 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 270 84 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 270 105 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 270 126 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 270 147 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 270 168 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 270 189 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 10 127 cnv 15 38 20 empty empty 1eg+ 2 9 0 12 #7c7c7c #dfdfdf
+0;
+#X obj 171 127 cnv 15 38 20 empty empty 2inv 4 9 0 12 #7c7c7c #dfdfdf
+0;
+#X obj 10 65 vsl 39 15 0 127 0 0 \$1trigger_env empty empty 0 -9 0
+10 #fcfcfc #000000 #000000 0 0;
+#X obj 796 111 change;
+#X msg 962 344 color #dfdfdf #7c7c7c #7c7c7c;
+#X msg 990 315 color #7c7c7c #dfdfdf #dfdfdf;
+#X obj 796 12 inlet~ 1trꞱ;
+#X obj 894 119 r \$1trigger_env;
+#X obj 990 372 s \$1trigger_blink;
+#X obj 428 671 outlet~;
+#X obj 796 85 env~;
+#X obj 894 144 t b b;
+#X obj 894 169 del 50;
+#X obj 796 57 expr~ $v1 > 0.5;
+#X obj 797 144 select 0 100;
+#X floatatom 338 405 5 0 0 0 - - - 0;
+#X obj 843 86 expr~ $v1 != 0;
+#X obj 337 378 expr 1.001 - pow($f1 \, 0.02);
+#X obj 36 428 expr 1.001 - pow($f1 \, 0.02);
+#X text 13 572 Adjust slop~ filter frequency to adjust length;
+#X floatatom 454 354 8 0 0 0 - - - 0;
+#X obj 456 328 expr 4999 - (pow($f1 \, .05) * 5000);
+#X msg 27 376 \$1 4;
+#X obj 27 401 line~;
+#X obj 27 319 expr if($f1<0.5 \, $f1*2 \, (pow(2*($f1-0.5) \, 2)*100)
++ 1);
+#N canvas 0 0 450 250 (subpatch) 0;
+#X array \$0scopescroll 500 float 2;
+#X coords 0 1 500 0 160 20 2 0 0;
+#X restore 50 63 graph;
+#X obj 10 42 cnv 15 200 19 empty empty function~\ FUNCTION\ GENERATOR
+2 9 0 12 #dfdfdf #606060 0;
+#X obj 10 104 abs/hslidermem \$1shape EXPLOG 0.5 100 20;
+#X obj 109 83 abs/hslidermem \$1fall FALL 0.5 100 20;
+#X obj 375 456 slop~ 100 1e+09 0 1e+09 0;
+#X obj 393 480 rzero_rev~ 0;
+#X obj 109 105 abs/hslidermem \$1fallexp EXPLOG 0.5 100 20;
+#X msg 37 266 \$1 4;
+#X obj 37 291 line~;
+#X obj 37 209 expr if($f1<0.5 \, $f1*2 \, (pow(2*($f1-0.5) \, 2)*100)
++ 1);
+#X obj 374 566 expr~ if($v1>$v2 \, pow($v1 \, $v3) \, pow($v1 \, 1/$v4))
+;
+#X obj 466 239 t b f;
+#X obj 466 264 +;
+#X obj 466 289 * 0.5;
+#X obj 37 234 max 1e-10;
+#X obj 27 344 max 1e-10;
+#X obj 210 42 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 210 63 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 210 84 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 210 105 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 210 126 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 210 147 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 210 168 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 210 189 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 10 63 cnv 15 39 20 empty \$1trigger_blink gtꞀ 4 9 0 12 #dfdfdf
+#7c7c7c 0;
+#X obj 10 83 abs/hslidermem \$1rise RISE 0 100 20;
+#N canvas 25 390 776 626 scopes 0;
+#X obj 244 107 bang~;
+#X obj 217 291 array set \$0scopescroll;
+#X obj 297 15 inlet~;
+#X obj 271 156 snapshot~;
+#X obj 217 241 array get \$0scopescroll;
+#X obj 271 181 t b f;
+#X obj 217 266 list append;
+#X msg 271 206 1;
+#X obj 431 258 block~ 16;
+#X connect 0 0 3 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 4 0 6 0;
+#X connect 5 0 7 0;
+#X connect 5 1 6 1;
+#X connect 6 0 1 0;
+#X connect 7 0 4 0;
+#X restore 375 622 pd scopes;
+#X obj 485 671 outlet~ inverse;
+#X obj 486 617 -~ 1;
+#X obj 486 642 abs~;
+#X connect 22 0 33 0;
+#X connect 23 0 27 0;
+#X connect 24 0 27 0;
+#X connect 25 0 32 0;
+#X connect 26 0 30 0;
+#X connect 29 0 22 0;
+#X connect 30 0 31 0;
+#X connect 30 1 24 0;
+#X connect 31 0 23 0;
+#X connect 32 0 29 0;
+#X connect 32 0 35 0;
+#X connect 32 0 48 0;
+#X connect 33 0 23 0;
+#X connect 33 1 24 0;
+#X connect 36 0 34 0;
+#X connect 36 0 48 4;
+#X connect 37 0 48 2;
+#X connect 40 0 39 0;
+#X connect 40 0 48 1;
+#X connect 41 0 42 0;
+#X connect 42 0 54 2;
+#X connect 43 0 59 0;
+#X connect 46 0 43 0;
+#X connect 47 0 37 0;
+#X connect 47 0 55 0;
+#X connect 48 0 49 0;
+#X connect 48 0 54 0;
+#X connect 49 0 54 1;
+#X connect 50 0 53 0;
+#X connect 51 0 52 0;
+#X connect 52 0 54 3;
+#X connect 53 0 58 0;
+#X connect 54 0 28 0;
+#X connect 54 0 70 0;
+#X connect 54 0 72 0;
+#X connect 55 0 56 0;
+#X connect 55 1 56 1;
+#X connect 56 0 57 0;
+#X connect 57 0 40 0;
+#X connect 58 0 51 0;
+#X connect 59 0 41 0;
+#X connect 69 0 36 0;
+#X connect 69 0 56 0;
+#X connect 72 0 73 0;
+#X connect 73 0 71 0;
+#X coords 0 -1 1 1 200 109 1 10 40;

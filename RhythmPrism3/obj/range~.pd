@@ -1,0 +1,117 @@
+#N canvas 40 81 1261 748 12;
+#X obj 10 42 cnv 15 200 123 empty empty range~\\\ MIN\\\ &\\\ MAX 2
+9 0 12 #dfdfdf #606060 0;
+#X obj 300 42 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 300 52 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 300 62 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 300 72 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 300 82 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 300 92 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 300 102 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 300 112 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 300 122 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 300 132 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 230 42 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 230 63 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 230 84 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 230 105 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 230 126 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 230 147 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 230 168 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 230 189 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 10 142 cnv 15 38 20 empty empty 1cv+ 2 9 0 12 #7c7c7c #dfdfdf
+0;
+#X obj 511 58 inlet~ 1trꞱ;
+#X obj 768 713 outlet~;
+#N canvas 0 0 450 250 (subpatch) 0;
+#X array \$0scopescroll 320 float 2;
+#X coords 0 1 320 0 160 79 2 0 0;
+#X restore 10 62 graph;
+#N canvas 759 31 776 626 scopes 0;
+#X obj 244 107 bang~;
+#X obj 217 291 array set \$0scopescroll;
+#X obj 297 15 inlet~;
+#X obj 271 156 snapshot~;
+#X obj 217 241 array get \$0scopescroll;
+#X obj 271 181 t b f;
+#X obj 217 266 list append;
+#X obj 430 258 block~ 1;
+#X msg 271 206 1;
+#X connect 0 0 3 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 4 0 6 0;
+#X connect 5 0 8 0;
+#X connect 5 1 6 1;
+#X connect 6 0 1 0;
+#X connect 8 0 4 0;
+#X restore 493 282 pd scopes;
+#X obj 494 222 +~;
+#X obj 493 142 *~;
+#X obj 377 215 t b f;
+#X obj 377 240 -;
+#X obj 377 290 line~;
+#X msg 377 265 \$1 4;
+#X obj 512 199 line~;
+#X msg 512 174 \$1 4;
+#X obj 110 143 cnv 15 39 20 empty \$1-max-display 6.944V 3 11 0 14
+#dfdfdf #7c7c7c 0;
+#X obj 235 435 s \$1-max-display;
+#X msg 235 395 label \$1V;
+#X obj 235 328 int;
+#X obj 235 303 * 10000;
+#X obj 235 353 / 1000;
+#X obj 50 143 cnv 15 39 20 empty \$1-min-display 5.138V 3 11 0 14 #dfdfdf
+#7c7c7c 0;
+#X msg 105 305 label \$1V;
+#X obj 105 238 int;
+#X obj 105 213 * 10000;
+#X obj 105 263 / 1000;
+#X obj 105 345 s \$1-min-display;
+#X obj 190 62 abs/vslidermem \$1-max \  0 20 100;
+#X obj 170 62 abs/vslidermem \$1-min \  0 20 100;
+#X obj 10 42 cnv 15 200 19 empty empty range~\\\ MIN\\\ &\\\ MAX 2
+9 0 12 #dfdfdf #606060 0;
+#X connect 20 0 25 1;
+#X connect 24 0 23 0;
+#X connect 24 0 21 0;
+#X connect 25 0 24 0;
+#X connect 26 0 27 0;
+#X connect 26 1 27 1;
+#X connect 27 0 29 0;
+#X connect 28 0 25 0;
+#X connect 29 0 28 0;
+#X connect 30 0 24 1;
+#X connect 31 0 30 0;
+#X connect 34 0 33 0;
+#X connect 35 0 37 0;
+#X connect 36 0 35 0;
+#X connect 37 0 34 0;
+#X connect 39 0 43 0;
+#X connect 40 0 42 0;
+#X connect 41 0 40 0;
+#X connect 42 0 39 0;
+#X connect 44 0 27 0;
+#X connect 44 0 36 0;
+#X connect 45 0 26 0;
+#X connect 45 0 31 0;
+#X connect 45 0 41 0;
+#X coords 0 -1 1 1 200 129 1 10 40;

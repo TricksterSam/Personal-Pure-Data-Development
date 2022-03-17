@@ -1,0 +1,13 @@
+#N canvas 183 37 1541 889 12;
+#X obj 1139 37 obj/launcher;
+#X text 1081 409 sample player;
+#X text 1081 429 granulator;
+#X text 1083 388 VCF;
+#X text 1083 346 VCO;
+#X text 1083 366 LFO;
+#X text 1183 346 ENV;
+#X text 1081 448 quantizer (see autoscale~);
+#X obj 684 843 dac~;
+#X text 1100 580 range~ is not efficient with cpu load. Consider a
+toggle to show/hide the display.;
+#X text 1101 627 key toggles need an initialization state;

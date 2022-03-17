@@ -1,0 +1,263 @@
+#N canvas 626 235 1223 758 12;
+#X obj 10 8 inlet~ cv+;
+#X obj 10 42 cnv 15 200 82 empty empty range_note~\\\ MIN\\\ &\\\ MAX\\\ NOTES
+2 9 0 12 #dfdfdf #606060 0;
+#X obj 290 42 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 290 52 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 290 62 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 290 72 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 290 82 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 290 92 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 290 102 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 290 112 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 290 122 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 290 132 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 240 42 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 240 62 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 240 82 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 240 103 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 240 124 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 240 144 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 240 164 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 240 184 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 11 62 cnv 15 38 20 empty empty 1cv+ 4 9 0 12 #7c7c7c #dfdfdf
+0;
+#X obj 16 504 outlet~;
+#X obj 11 104 cnv 15 38 20 empty empty 1cv+- 4 9 0 12 #7c7c7c #dfdfdf
+0;
+#X obj 123 202 -;
+#X obj 88 315 *~;
+#X obj 88 435 +~;
+#X obj 123 177 t b f f f;
+#X obj 132 134 t f f;
+#X obj 50 62 cnv 15 20 20 empty \$1low-oct-r 2\  4 9 0 12 #dfdfdf #7c7c7c
+0;
+#X obj 140 62 cnv 15 20 20 empty \$1high-oct-r 5\  4 9 0 12 #dfdfdf
+#7c7c7c 0;
+#X obj 50 104 cnv 15 20 20 empty \$1curr-oct-r 2\  4 9 0 12 #dfdfdf
+#7c7c7c 0;
+#X obj 70 62 cnv 15 20 20 empty \$1low-r D 4 9 0 12 #dfdfdf #7c7c7c
+0;
+#X obj 160 62 cnv 15 20 20 empty \$1high-r E 4 9 0 12 #dfdfdf #7c7c7c
+0;
+#X obj 70 104 cnv 15 20 20 empty \$1curr-r G#/Ab 4 9 0 12 #dfdfdf #7c7c7c
+0;
+#X obj 16 465 -~ 0.5;
+#N canvas 0 0 450 300 label 0;
+#X obj 70 16 inlet;
+#X obj 76 64 * 120;
+#X obj 76 93 mod 12;
+#X obj 76 118 sel 0 1 2 3 4 5 6 7 8 9 10 11;
+#X msg 76 145 label C;
+#X msg 106 191 label D;
+#X msg 172 145 label E;
+#X msg 188 168 label F;
+#X msg 218 214 label G;
+#X msg 285 168 label A;
+#X msg 315 214 label B;
+#X msg 92 168 label C#/Db;
+#X msg 122 214 label D#/Eb;
+#X msg 202 191 label F#/Gb;
+#X msg 269 145 label G#/Ab;
+#X msg 299 191 label A#/Bb;
+#X obj 156 20 div 12;
+#X msg 156 65 label \$1\\\ ;
+#X obj 76 265 s \$1high-r;
+#X obj 156 89 s \$1high-oct-r;
+#X obj 156 42 - 1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 16 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 1 11 0;
+#X connect 3 2 5 0;
+#X connect 3 3 12 0;
+#X connect 3 4 6 0;
+#X connect 3 5 7 0;
+#X connect 3 6 13 0;
+#X connect 3 7 8 0;
+#X connect 3 8 14 0;
+#X connect 3 9 9 0;
+#X connect 3 10 15 0;
+#X connect 3 11 10 0;
+#X connect 4 0 18 0;
+#X connect 5 0 18 0;
+#X connect 6 0 18 0;
+#X connect 7 0 18 0;
+#X connect 8 0 18 0;
+#X connect 9 0 18 0;
+#X connect 10 0 18 0;
+#X connect 11 0 18 0;
+#X connect 12 0 18 0;
+#X connect 13 0 18 0;
+#X connect 14 0 18 0;
+#X connect 15 0 18 0;
+#X connect 16 0 20 0;
+#X connect 17 0 19 0;
+#X connect 20 0 17 0;
+#X restore 217 214 pd label high;
+#N canvas 0 0 450 300 label 0;
+#X obj 43 20 inlet;
+#X obj 48 63 * 120;
+#X obj 48 92 mod 12;
+#X obj 48 117 sel 0 1 2 3 4 5 6 7 8 9 10 11;
+#X msg 48 144 label C;
+#X msg 78 190 label D;
+#X msg 144 144 label E;
+#X msg 160 167 label F;
+#X msg 190 213 label G;
+#X msg 257 167 label A;
+#X msg 287 213 label B;
+#X msg 64 167 label C#/Db;
+#X msg 94 213 label D#/Eb;
+#X msg 174 190 label F#/Gb;
+#X msg 241 144 label G#/Ab;
+#X msg 271 190 label A#/Bb;
+#X obj 128 19 div 12;
+#X msg 128 64 label \$1\\\ ;
+#X obj 48 264 s \$1low-r;
+#X obj 128 88 s \$1low-oct-r;
+#X obj 128 41 - 1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 16 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 1 11 0;
+#X connect 3 2 5 0;
+#X connect 3 3 12 0;
+#X connect 3 4 6 0;
+#X connect 3 5 7 0;
+#X connect 3 6 13 0;
+#X connect 3 7 8 0;
+#X connect 3 8 14 0;
+#X connect 3 9 9 0;
+#X connect 3 10 15 0;
+#X connect 3 11 10 0;
+#X connect 4 0 18 0;
+#X connect 5 0 18 0;
+#X connect 6 0 18 0;
+#X connect 7 0 18 0;
+#X connect 8 0 18 0;
+#X connect 9 0 18 0;
+#X connect 10 0 18 0;
+#X connect 11 0 18 0;
+#X connect 12 0 18 0;
+#X connect 13 0 18 0;
+#X connect 14 0 18 0;
+#X connect 15 0 18 0;
+#X connect 16 0 20 0;
+#X connect 17 0 19 0;
+#X connect 20 0 17 0;
+#X restore 211 238 pd label low;
+#N canvas 0 0 465 408 label 0;
+#X obj 48 121 * 120;
+#X obj 48 150 mod 12;
+#X obj 48 175 sel 0 1 2 3 4 5 6 7 8 9 10 11;
+#X msg 48 202 label C;
+#X msg 78 248 label D;
+#X msg 144 202 label E;
+#X msg 160 225 label F;
+#X msg 190 271 label G;
+#X msg 257 225 label A;
+#X msg 287 271 label B;
+#X msg 64 225 label C#/Db;
+#X msg 94 271 label D#/Eb;
+#X msg 174 248 label F#/Gb;
+#X msg 241 202 label G#/Ab;
+#X msg 271 248 label A#/Bb;
+#X obj 128 77 div 12;
+#X msg 128 122 label \$1\\\ ;
+#X obj 128 146 s \$1curr-oct-r;
+#X obj 48 322 s \$1curr-r;
+#X obj 48 72 snapshot~;
+#X obj 88 39 bang~;
+#X obj 48 97 change;
+#X obj 128 100 - 1;
+#X obj 48 16 inlet~;
+#X connect 0 0 1 0;
+#X connect 0 0 15 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 10 0;
+#X connect 2 2 4 0;
+#X connect 2 3 11 0;
+#X connect 2 4 5 0;
+#X connect 2 5 6 0;
+#X connect 2 6 12 0;
+#X connect 2 7 7 0;
+#X connect 2 8 13 0;
+#X connect 2 9 8 0;
+#X connect 2 10 14 0;
+#X connect 2 11 9 0;
+#X connect 3 0 18 0;
+#X connect 4 0 18 0;
+#X connect 5 0 18 0;
+#X connect 6 0 18 0;
+#X connect 7 0 18 0;
+#X connect 8 0 18 0;
+#X connect 9 0 18 0;
+#X connect 10 0 18 0;
+#X connect 11 0 18 0;
+#X connect 12 0 18 0;
+#X connect 13 0 18 0;
+#X connect 14 0 18 0;
+#X connect 15 0 22 0;
+#X connect 16 0 17 0;
+#X connect 19 0 21 0;
+#X connect 20 0 19 0;
+#X connect 21 0 0 0;
+#X connect 22 0 16 0;
+#X connect 23 0 19 0;
+#X restore 106 510 pd label current;
+#X obj 391 397 expr~ $v1 != $v2;
+#X obj 469 361 rzero_rev~ 0;
+#X obj 321 438 samphold~;
+#X obj 321 468 samphold~;
+#X obj 122 231 sig~;
+#X obj 105 370 sig~;
+#X obj 10 83 abs/hslidermem \$1low LOW 0.4;
+#X obj 110 83 abs/hslidermem \$1high HIGH 0.6;
+#X connect 0 0 24 0;
+#X connect 0 0 39 0;
+#X connect 0 0 38 0;
+#X connect 23 0 42 0;
+#X connect 24 0 25 0;
+#X connect 25 0 34 0;
+#X connect 25 0 37 0;
+#X connect 26 0 23 0;
+#X connect 26 1 23 1;
+#X connect 26 2 43 0;
+#X connect 26 3 36 0;
+#X connect 27 0 23 0;
+#X connect 27 1 35 0;
+#X connect 34 0 21 0;
+#X connect 38 0 40 1;
+#X connect 38 0 41 1;
+#X connect 39 0 38 1;
+#X connect 40 0 24 1;
+#X connect 41 0 25 1;
+#X connect 42 0 40 0;
+#X connect 43 0 41 0;
+#X connect 44 0 26 0;
+#X connect 45 0 27 0;
+#X coords 0 -1 1 1 200 86 2 10 40;
