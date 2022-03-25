@@ -1,0 +1,8 @@
+#N canvas 0 0 450 300 12;
+#X obj 67 98 fudiformat -u;
+#X obj 67 121 list tosymbol;
+#X obj 67 146 outlet;
+#X obj 67 75 inlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 0 0;

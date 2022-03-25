@@ -1,6 +1,6 @@
-#N canvas 124 273 1163 716 12;
-#X obj 10 42 cnv 15 300 257 empty empty launcher\ OBJECT\ CREATOR 2
-9 0 12 #dfdfdf #606060 0;
+#N canvas 291 213 1163 716 12;
+#X obj 10 42 cnv 15 300 257 empty empty launcher\\\ OBJECT\\\ CREATOR
+2 9 0 12 #dfdfdf #606060 0;
 #X obj 460 42 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
 0;
 #X obj 460 52 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
@@ -65,18 +65,18 @@
 #X msg 928 218 seqrand~;
 #X msg 928 268 shiftreg~;
 #X msg 758 318 offset~;
-#X msg 680 370 1;
-#X obj 680 395 +;
-#X obj 734 376 mod 9e+09;
-#X obj 657 347 t a b a;
-#X obj 657 499 list append;
-#X msg 680 469 \$1num;
-#X msg 657 609 \; pd-_parent.pd obj 40 40 obj/\$1 \$2 \, loadbang \,
+#X msg 679 428 1;
+#X obj 679 453 +;
+#X obj 733 434 mod 9e+09;
+#X obj 656 405 t a b a;
+#X obj 656 557 list append;
+#X msg 679 527 \$1num;
+#X msg 657 639 \; pd-_parent.pd obj 40 40 obj/\$1 \$2 \, loadbang \,
 editmode 1;
-#X obj 20 166 bng 19 250 50 0 make_envel empty envel~ 22 10 0 10 #404040
+#X obj 20 187 bng 19 250 50 0 make_envel empty envel~ 22 10 0 10 #404040
 #dfdfdf #7c7c7c;
-#X obj 608 193 r make_envel;
-#X msg 608 218 envel~;
+#X obj 608 243 r make_envel;
+#X msg 608 268 envel~;
 #X obj 91 338 r saveindex-s;
 #X obj 174 281 hsl 74 20 0 127 0 0 save-confirm empty empty -2 -8 0
 10 #fcfcfc #000000 #000000 0 0;
@@ -117,10 +117,10 @@ editmode 1;
 #X obj 50 59 cnv 15 38 19 empty empty number\\\ of\\\ objects 4 9 0
 12 #dfdfdf #7c7c7c 0;
 #X floatatom 180 60 5 0 0 0 - - - 0;
-#X msg 734 469 set \$1;
+#X msg 733 527 set \$1;
 #X obj 110 229 bng 19 250 50 0 make_pulse empty pulse~ 22 10 0 10 #404040
 #dfdfdf #7c7c7c;
-#X obj 20 145 bng 19 250 50 0 make_directory empty directory~ 22 10
+#X obj 20 166 bng 19 250 50 0 make_directory empty directory~ 22 10
 0 10 #404040 #dfdfdf #7c7c7c;
 #X obj 608 143 r make_directory;
 #X msg 608 168 directory~;
@@ -134,8 +134,8 @@ editmode 1;
 #X msg 1048 118 triggate~;
 #X obj 1048 143 r make_vco;
 #X msg 1048 168 vco~;
-#X msg 830 397 bang;
-#X obj 734 398 t b a a a;
+#X msg 829 455 bang;
+#X obj 733 456 t b a a a;
 #X obj 928 293 r make_temperament;
 #X msg 928 318 temperament~;
 #X obj 608 43 r make_atten;
@@ -148,13 +148,21 @@ editmode 1;
 #X msg 928 168 range~;
 #X obj 210 103 bng 19 250 50 0 make_range empty range~ 22 10 0 10 #404040
 #dfdfdf #7c7c7c;
-#X obj 734 448 abs/parammem launchedobjs;
-#X msg 658 528 \; pd-_parent.pd obj 40 40 obj/\$1 \$2 \, editmode 1
+#X obj 733 506 abs/parammem launchedobjs;
+#X msg 657 586 \; pd-_parent.pd obj 40 40 obj/\$1 \$2 \, editmode 1
 \; createbang bang \;;
-#X obj 20 187 bng 19 250 50 0 make_function empty function~ 22 10 0
+#X obj 20 208 bng 19 250 50 0 make_filter empty filter~ 22 10 0 10
+#404040 #dfdfdf #7c7c7c;
+#X obj 608 293 r make_function;
+#X obj 20 229 bng 19 250 50 0 make_function empty function~ 22 10 0
 10 #404040 #dfdfdf #7c7c7c;
-#X obj 608 243 r make_function;
-#X msg 608 268 function~;
+#X obj 608 343 r make_function;
+#X msg 608 368 function~;
+#X msg 608 318 filter~;
+#X obj 20 145 bng 19 250 50 0 make_clockops empty clockops~ 22 10 0
+10 #404040 #dfdfdf #7c7c7c;
+#X obj 608 193 r make_clockops;
+#X msg 608 218 clockops~;
 #X connect 28 0 33 0;
 #X connect 29 0 37 0;
 #X connect 30 0 34 0;
@@ -231,6 +239,10 @@ editmode 1;
 #X connect 107 0 82 0;
 #X connect 107 0 39 1;
 #X connect 107 1 95 0;
-#X connect 110 0 111 0;
-#X connect 111 0 41 0;
+#X connect 110 0 114 0;
+#X connect 112 0 113 0;
+#X connect 113 0 41 0;
+#X connect 114 0 41 0;
+#X connect 116 0 117 0;
+#X connect 117 0 41 0;
 #X coords 0 -1 1 1 300 261 1 10 40;

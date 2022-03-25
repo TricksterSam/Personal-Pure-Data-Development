@@ -1,0 +1,5 @@
+#N struct 2077-element float x float y symbol menu float lenght float
+height float selection float ypos float col-back float col-lab;
+#N canvas 868 392 1021 512 12;
+#X obj 10 10 jp.menu \$1-files 140 20 \$1-selection 0 999 8;
+#X coords 0 -1 1 1 140 20 2 10 10;

@@ -62,8 +62,8 @@
 #X obj 363 25 expr pow(3 \, (10*$f1)-7.2);
 #X obj 363 75 line~;
 #X msg 363 50 \$1 4;
-#X obj 0 129 cnv 15 78 20 empty \$1-ch1hz-r 0Hz 2 9 0 12 #dfdfdf #7c7c7c
-0;
+#X obj 0 129 cnv 15 78 20 empty \$1-ch1hz-r -0.849Hz 2 9 0 12 #dfdfdf
+#7c7c7c 0;
 #X obj 463 713 delwrite~ \$1-relabidelay 1;
 #X obj 12 214 delread4~ \$1-relabidelay 0;
 #X obj 18 406 osc~;
@@ -71,8 +71,8 @@
 #X obj 18 684 outlet~ cv+-;
 #X obj 53 659 outlet~ tr^;
 #X msg 478 185 bang;
-#X obj 60 129 cnv 15 40 20 empty \$1-ch2hz-r 0Hz 2 9 0 12 #dfdfdf #7c7c7c
-0;
+#X obj 60 129 cnv 15 40 20 empty \$1-ch2hz-r 0.437Hz 2 9 0 12 #dfdfdf
+#7c7c7c 0;
 #X obj 120 129 cnv 15 40 20 empty \$1-ch3hz-r 0.578Hz 2 9 0 12 #dfdfdf
 #7c7c7c 0;
 #X obj 180 129 cnv 15 40 20 empty \$1-ch4hz-r 0.621Hz 2 9 0 12 #dfdfdf

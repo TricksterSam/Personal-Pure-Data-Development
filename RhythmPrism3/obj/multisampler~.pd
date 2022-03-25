@@ -1,0 +1,197 @@
+#N canvas 32 38 907 933 12;
+#X obj 0 2 cnv 15 200 144 empty empty multisampler~ 2 9 0 12 #dfdfdf
+#606060 0;
+#X obj 708 2 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 708 12 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 708 22 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 708 32 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 708 42 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 708 52 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 708 62 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 708 72 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 708 82 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 708 92 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 681 0 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 681 21 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 681 42 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 681 63 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 681 84 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 681 105 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 681 126 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+0;
+#X obj 681 147 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+0;
+#X obj 0 125 cnv 15 38 20 empty empty sig+- 2 9 0 12 #7c7c7c #dfdfdf
+0;
+#X obj 102 105 cnv 15 38 19 empty \$1tunedisplay-r tune\ 2140c 2 9
+0 12 #dfdfdf #7c7c7c 0;
+#X obj 0 24 vsl 38 14 0 127 0 0 \$1tr-note-s empty empty 0 -9 0 10
+#fcfcfc #000000 #000000 0 0;
+#X obj 0 21 cnv 15 38 20 empty \$1tr-note-r 1trꞱ 4 9 0 12 #7c7c7c
+#dfdfdf 0;
+#X obj 40 21 cnv 15 38 20 empty empty 2pi+ 4 9 0 12 #7c7c7c #dfdfdf
+0;
+#X obj 80 21 cnv 15 38 20 empty empty 3amp+ 4 9 0 12 #7c7c7c #dfdfdf
+0;
+#X obj 6 355 clone abs/sampslot 8 \$1;
+#X obj 241 331 catch~ \$1-output;
+#X obj 384 436 s \$1-playslot;
+#X obj 160 84 bng 20 250 50 0 \$1-loadslot empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 180 84 bng 20 250 50 0 \$1-loadslot empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 160 84 cnv 15 40 20 empty empty load 3 12 0 14 #9f9f9f #404040
+0;
+#X obj 242 443 *~;
+#X msg 260 383 \$1 4;
+#X obj 260 408 line~;
+#X obj 242 468 outlet~;
+#X obj 13 170 s \$1-tune;
+#X obj 419 34 r \$1-tune-s;
+#X obj 381 185 inlet~ trigger;
+#X obj 485 185 inlet~ frequency;
+#X obj 603 185 inlet~ amplitude;
+#X obj 841 185 inlet~ select;
+#X msg 34 803 0;
+#X obj 34 828 s \$1-selectslot-r;
+#X msg 66 803 3;
+#X text 32 729 initialize GUI;
+#X obj 34 755 abs/createbang;
+#X obj 35 684 s \$1tunedisplay-r;
+#X obj 35 581 r \$1-repitch;
+#X obj 35 606 * 100;
+#X obj 35 631 int;
+#X text 32 558 display tuning;
+#X obj 34 780 t b b b;
+#X obj 80 880 s \$1mute-r;
+#X obj 429 5 r \$1mute-r;
+#X msg 80 857 1;
+#X obj 0 84 hradio 20 1 0 8 \$1-selectslot-s \$1-selectslot-r 0:nondo_hit_C.wav
+3 11 0 10 #404040 #dfdfdf #9f9f9f 0;
+#X obj 384 335 snapshot~;
+#X obj 381 210 expr~ $v1 > 0.5;
+#X obj 381 235 snapshot~;
+#X obj 527 215 bang~;
+#X obj 384 360 * 7;
+#X obj 384 385 + 0.5;
+#X obj 384 410 int;
+#X obj 841 210 env~;
+#X floatatom 841 235 5 0 0 0 - - - 0;
+#X obj 381 290 sel 1;
+#X msg 35 658 label tune\\\ \$1c;
+#X obj 214 593 - 0.5;
+#X floatatom 214 643 5 0 0 0 - - - 0;
+#X obj 293 603 - 0.5;
+#X obj 293 628 * 2;
+#X obj 206 671 t b f;
+#X obj 206 696 +;
+#X obj 214 500 r \$1-freqslider-s;
+#X obj 293 566 r \$1-freqslider-s;
+#X obj 214 568 +;
+#X obj 485 315 snapshot~;
+#X obj 206 723 s \$1-transpose;
+#X obj 381 260 change;
+#X obj 214 525 t b f;
+#X obj 214 618 * 100;
+#X obj 0 42 abs/hslidermem \$1-freq PITCH 0 80 20;
+#X obj 160 42 abs/button20 \$1-button w MUTE;
+#X obj 80 42 abs/hslidermem \$1-amp AMP 1 80 20;
+#X obj 603 291 s~ \$1-amp;
+#X obj 603 268 +~;
+#X msg 621 220 \$1 4;
+#X obj 621 245 line~;
+#X obj 0 105 abs/hslidermem \$1-tuning TUNE 0.5 100 20;
+#X msg 409 462 set \$1;
+#X obj 349 157 r \$1-triggerslot-s;
+#X obj 409 486 s \$1-triggerslot-r;
+#X obj 160 63 abs/button20 \$1rev w REV;
+#X obj 237 127 s \$1reverse;
+#X obj 120 21 cnv 15 38 20 empty empty 4revꞀ 4 9 0 12 #7c7c7c #dfdfdf
+0;
+#X obj 721 210 expr~ $v1 > 0.5;
+#X obj 721 255 snapshot~;
+#X obj 721 280 change;
+#X obj 721 185 inlet~ reverse;
+#X obj 160 21 cnv 15 38 20 empty empty 5sel+ 4 9 0 12 #7c7c7c #dfdfdf
+0;
+#X obj 0 63 hradio 20 1 0 8 \$1-triggerslot-s \$1-triggerslot-r triggers
+3 11 0 10 #7c7c7c #404040 #9f9f9f 0;
+#X connect 26 0 31 0;
+#X connect 31 0 34 0;
+#X connect 32 0 33 0;
+#X connect 33 0 31 1;
+#X connect 36 0 88 0;
+#X connect 37 0 57 0;
+#X connect 38 0 76 0;
+#X connect 39 0 85 0;
+#X connect 40 0 56 0;
+#X connect 40 0 63 0;
+#X connect 41 0 42 0;
+#X connect 43 0 42 0;
+#X connect 45 0 51 0;
+#X connect 47 0 48 0;
+#X connect 48 0 49 0;
+#X connect 49 0 66 0;
+#X connect 51 0 41 0;
+#X connect 51 1 43 0;
+#X connect 51 2 54 0;
+#X connect 53 0 82 0;
+#X connect 54 0 52 0;
+#X connect 56 0 60 0;
+#X connect 57 0 58 0;
+#X connect 58 0 78 0;
+#X connect 59 0 58 0;
+#X connect 59 0 96 0;
+#X connect 60 0 61 0;
+#X connect 61 0 62 0;
+#X connect 62 0 27 0;
+#X connect 62 0 89 0;
+#X connect 63 0 64 0;
+#X connect 65 0 56 0;
+#X connect 65 0 76 0;
+#X connect 66 0 46 0;
+#X connect 67 0 80 0;
+#X connect 69 0 70 0;
+#X connect 70 0 71 0;
+#X connect 71 0 72 0;
+#X connect 71 1 72 1;
+#X connect 72 0 77 0;
+#X connect 73 0 79 0;
+#X connect 74 0 69 0;
+#X connect 75 0 67 0;
+#X connect 76 0 75 0;
+#X connect 78 0 65 0;
+#X connect 79 0 75 0;
+#X connect 79 1 75 1;
+#X connect 80 0 68 0;
+#X connect 80 0 72 0;
+#X connect 82 0 32 0;
+#X connect 83 0 86 0;
+#X connect 85 0 84 0;
+#X connect 86 0 87 0;
+#X connect 87 0 85 1;
+#X connect 88 0 35 0;
+#X connect 89 0 91 0;
+#X connect 90 0 60 0;
+#X connect 92 0 93 0;
+#X connect 95 0 96 0;
+#X connect 96 0 97 0;
+#X connect 97 0 92 0;
+#X connect 98 0 95 0;
+#X coords 0 -1 1 1 200 148 2 0 0;
