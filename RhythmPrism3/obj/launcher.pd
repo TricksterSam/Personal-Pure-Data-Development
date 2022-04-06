@@ -1,4 +1,4 @@
-#N canvas 291 213 1163 716 12;
+#N canvas 423 1230 1163 716 12;
 #X obj 10 42 cnv 15 300 257 empty empty launcher\\\ OBJECT\\\ CREATOR
 2 9 0 12 #dfdfdf #606060 0;
 #X obj 460 42 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
@@ -37,34 +37,32 @@
 0;
 #X obj 430 189 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
 0;
-#X obj 210 124 bng 19 250 50 0 make_relabi empty relabi~ 22 10 0 10
+#X obj 110 194 bng 19 250 50 0 make_relabi empty relabi~ 22 10 0 10
 #404040 #dfdfdf #7c7c7c;
-#X obj 20 103 bng 19 250 50 0 make_atten empty atten~ 22 10 0 10 #404040
+#X obj 20 90 bng 19 250 50 0 make_atten empty atten~ 22 10 0 10 #404040
 #dfdfdf #7c7c7c;
-#X obj 210 166 bng 19 250 50 0 make_shiftreg empty shiftreg~ 22 10
+#X obj 210 153 bng 19 250 50 0 make_shiftreg empty shiftreg~ 22 10
 0 10 #404040 #dfdfdf #7c7c7c;
-#X obj 210 145 bng 19 250 50 0 make_seqrand empty seqrand~ 22 10 0
+#X obj 210 111 bng 19 250 50 0 make_seqrand empty seqrand~ 22 10 0
 10 #404040 #dfdfdf #7c7c7c;
-#X obj 110 187 bng 19 250 50 0 make_midigen empty midigen~ 22 10 0
-10 #404040 #dfdfdf #7c7c7c;
-#X obj 110 208 bng 19 250 50 0 make_offset empty offset~ 22 10 0 10
+#X obj 110 110 bng 19 250 50 0 make_multisampler empty multisampler~
+22 10 0 10 #404040 #dfdfdf #7c7c7c;
+#X obj 110 131 bng 19 250 50 0 make_offset empty offset~ 22 10 0 10
 #404040 #dfdfdf #7c7c7c;
-#X obj 210 208 bng 19 250 50 0 make_triggate empty triggate~ 22 10
+#X obj 210 195 bng 19 250 50 0 make_triggate empty triggate~ 22 10
 0 10 #404040 #dfdfdf #7c7c7c;
-#X obj 10 261 hradio 20 1 0 8 loadindex empty load\\\ state 165 10
-0 10 #606060 #dfdfdf #7c7c7c 0;
-#X obj 10 281 hradio 20 1 0 8 saveindex-s empty save\\\ state 165 10
-0 10 #606060 #ff0400 #7c7c7c 0;
-#X obj 758 243 r make_midigen;
-#X obj 758 293 r make_offset;
-#X obj 928 93 r make_relabi;
+#X obj 10 261 hradio 20 1 0 8 loadindex empty empty 160 10 0 10 #606060
+#dfdfdf #7c7c7c 0;
+#X obj 10 281 hradio 20 1 0 8 saveindex-s empty empty 165 10 0 10 #606060
+#ff0400 #7c7c7c 0;
+#X obj 758 143 r make_offset;
+#X obj 758 241 r make_relabi;
 #X obj 928 243 r make_shiftreg;
-#X obj 928 193 r make_seqrand;
-#X msg 758 268 midigen~;
-#X msg 928 118 relabi~;
-#X msg 928 218 seqrand~;
+#X obj 928 143 r make_seqrand;
+#X msg 758 266 relabi~;
+#X msg 928 168 seqrand~;
 #X msg 928 268 shiftreg~;
-#X msg 758 318 offset~;
+#X msg 758 168 offset~;
 #X msg 679 428 1;
 #X obj 679 453 +;
 #X obj 733 434 mod 9e+09;
@@ -73,14 +71,14 @@
 #X msg 679 527 \$1num;
 #X msg 657 639 \; pd-_parent.pd obj 40 40 obj/\$1 \$2 \, loadbang \,
 editmode 1;
-#X obj 20 187 bng 19 250 50 0 make_envel empty envel~ 22 10 0 10 #404040
+#X obj 20 174 bng 19 250 50 0 make_envel empty envel~ 22 10 0 10 #404040
 #dfdfdf #7c7c7c;
 #X obj 608 243 r make_envel;
 #X msg 608 268 envel~;
 #X obj 91 338 r saveindex-s;
-#X obj 174 281 hsl 74 20 0 127 0 0 save-confirm empty empty -2 -8 0
+#X obj 174 281 hsl 54 20 0 127 0 0 save-confirm empty empty -2 -8 0
 10 #fcfcfc #000000 #000000 0 0;
-#X obj 171 281 cnv 15 79 20 empty savestatus save\\\ state 5 10 0 10
+#X obj 171 281 cnv 15 59 20 empty savestatus save\\\ state 2 10 0 10
 #dfdfdf #7c7c7c 0;
 #X obj 207 338 r save-confirm;
 #X obj 79 592 s savestatus;
@@ -89,9 +87,9 @@ editmode 1;
 #X msg 207 363 bang;
 #X msg 71 556 color #dfdfdf #7c7c7c #7c7c7c \, label save\ state;
 #X msg 79 527 color #ff0400 #dfdfdf #dfdfdf \, label confirm?;
-#X obj 174 261 hsl 74 20 0 127 0 0 save-cancel empty empty -2 -8 0
+#X obj 174 261 hsl 54 20 0 127 0 0 save-cancel empty empty -2 -8 0
 10 #fcfcfc #000000 #000000 0 0;
-#X obj 171 261 cnv 15 79 20 empty cancelstatus load\\\ state 5 10 0
+#X obj 171 261 cnv 15 59 20 empty cancelstatus load\\\ state 2 10 0
 10 #dfdfdf #7c7c7c 0;
 #X msg 184 614 color #dfdfdf #7c7c7c #7c7c7c \, label load\ state;
 #X msg 192 585 color #7c7c7c #dfdfdf #dfdfdf \, label cancel?;
@@ -118,17 +116,17 @@ editmode 1;
 12 #dfdfdf #7c7c7c 0;
 #X floatatom 180 60 5 0 0 0 - - - 0;
 #X msg 733 527 set \$1;
-#X obj 110 229 bng 19 250 50 0 make_pulse empty pulse~ 22 10 0 10 #404040
+#X obj 110 152 bng 19 250 50 0 make_pulse empty pulse~ 22 10 0 10 #404040
 #dfdfdf #7c7c7c;
-#X obj 20 166 bng 19 250 50 0 make_directory empty directory~ 22 10
+#X obj 20 153 bng 19 250 50 0 make_directory empty directory~ 22 10
 0 10 #404040 #dfdfdf #7c7c7c;
 #X obj 608 143 r make_directory;
 #X msg 608 168 directory~;
-#X obj 928 43 r make_pulse;
-#X msg 928 68 pulse~;
-#X obj 210 229 bng 19 250 50 0 make_vco empty vco~ 22 10 0 10 #404040
+#X obj 758 191 r make_pulse;
+#X msg 758 216 pulse~;
+#X obj 210 216 bng 19 250 50 0 make_vco empty vco~ 22 10 0 10 #404040
 #dfdfdf #7c7c7c;
-#X obj 210 187 bng 19 250 50 0 make_temperament empty temperament~
+#X obj 210 174 bng 19 250 50 0 make_temperament empty temperament~
 22 10 0 10 #404040 #dfdfdf #7c7c7c;
 #X obj 1048 93 r make_triggate;
 #X msg 1048 118 triggate~;
@@ -141,108 +139,157 @@ editmode 1;
 #X obj 608 43 r make_atten;
 #X msg 608 68 atten~;
 #X msg 608 118 average~;
-#X obj 20 124 bng 19 250 50 0 make_average empty average~ 22 10 0 10
+#X obj 20 111 bng 19 250 50 0 make_average empty average~ 22 10 0 10
 #404040 #dfdfdf #7c7c7c;
 #X obj 608 93 r make_average;
-#X obj 928 143 r make_range;
-#X msg 928 168 range~;
-#X obj 210 103 bng 19 250 50 0 make_range empty range~ 22 10 0 10 #404040
+#X obj 110 173 bng 19 250 50 0 make_range empty range~ 22 10 0 10 #404040
 #dfdfdf #7c7c7c;
 #X obj 733 506 abs/parammem launchedobjs;
 #X msg 657 586 \; pd-_parent.pd obj 40 40 obj/\$1 \$2 \, editmode 1
 \; createbang bang \;;
-#X obj 20 208 bng 19 250 50 0 make_filter empty filter~ 22 10 0 10
+#X obj 20 195 bng 19 250 50 0 make_filter empty filter~ 22 10 0 10
 #404040 #dfdfdf #7c7c7c;
 #X obj 608 293 r make_function;
-#X obj 20 229 bng 19 250 50 0 make_function empty function~ 22 10 0
+#X obj 20 216 bng 19 250 50 0 make_function empty function~ 22 10 0
 10 #404040 #dfdfdf #7c7c7c;
 #X obj 608 343 r make_function;
 #X msg 608 368 function~;
 #X msg 608 318 filter~;
-#X obj 20 145 bng 19 250 50 0 make_clockops empty clockops~ 22 10 0
+#X obj 20 132 bng 19 250 50 0 make_clockops empty clockops~ 22 10 0
 10 #404040 #dfdfdf #7c7c7c;
 #X obj 608 193 r make_clockops;
 #X msg 608 218 clockops~;
-#X connect 28 0 33 0;
-#X connect 29 0 37 0;
+#X obj 758 43 r make_midigen;
+#X msg 758 68 midigen~;
+#X obj 758 93 r make_multisampler;
+#X msg 758 118 multisampler~;
+#X obj 110 89 bng 19 250 50 0 make_midigen empty midigen~ 22 10 0 10
+#404040 #dfdfdf #7c7c7c;
+#X obj 431 405 s loadNtrpl8;
+#X obj 260 262 cnv 15 20 20 empty \$0-transtime-r 0ms 2 10 0 14 #e0e0e0
+#7c7c7c 0;
+#X obj 457 453 s \$0-transtime-r;
+#X msg 457 428 label \$1ms;
+#X obj 457 355 * 12000;
+#X obj 457 330 pow 3;
+#X obj 457 380 int;
+#X obj 13 253 hsl 155 8 0 1 0 0 empty \$0translocation-r empty -2 -8
+0 10 #7c7c7c #dfdfdf #000000 0 1;
+#X obj 485 547 s \$0translocation-r;
+#X obj 485 524 line;
+#X msg 485 498 0 \, 1 \$1;
+#X obj 485 476 f;
+#X obj 522 380 r loadindex;
+#X msg 522 405 bang;
+#X obj 210 241 abs/hslidermem Ntrpl8 trans 0 100 20;
+#X obj 210 132 bng 19 250 50 0 make_sequence empty sequence~ 22 10
+0 10 #404040 #dfdfdf #7c7c7c;
+#X obj 928 193 r make_sequence;
+#X msg 928 218 sequence~;
+#X obj 210 90 bng 19 250 50 0 make_scope empty scope~ 22 10 0 10 #404040
+#dfdfdf #7c7c7c;
+#X obj 758 293 r make_range;
+#X msg 758 318 range~;
+#X obj 928 93 r make_scope;
+#X msg 928 118 scope~;
+#X connect 28 0 35 0;
+#X connect 29 0 32 0;
 #X connect 30 0 34 0;
-#X connect 31 0 36 0;
-#X connect 32 0 35 0;
-#X connect 33 0 41 0;
-#X connect 34 0 41 0;
-#X connect 35 0 41 0;
-#X connect 36 0 41 0;
+#X connect 31 0 33 0;
+#X connect 32 0 39 0;
+#X connect 33 0 39 0;
+#X connect 34 0 39 0;
+#X connect 35 0 39 0;
+#X connect 36 0 37 0;
+#X connect 37 0 38 0;
 #X connect 37 0 41 0;
-#X connect 38 0 39 0;
+#X connect 38 0 94 0;
 #X connect 39 0 40 0;
-#X connect 39 0 43 0;
-#X connect 40 0 96 0;
-#X connect 41 0 42 0;
-#X connect 41 1 38 0;
-#X connect 42 0 108 0;
-#X connect 43 0 42 1;
-#X connect 46 0 47 0;
-#X connect 47 0 41 0;
-#X connect 48 0 66 0;
-#X connect 51 0 55 0;
+#X connect 39 1 36 0;
+#X connect 40 0 104 0;
+#X connect 41 0 40 1;
+#X connect 44 0 45 0;
+#X connect 45 0 39 0;
+#X connect 46 0 64 0;
+#X connect 49 0 53 0;
+#X connect 51 0 52 0;
 #X connect 53 0 54 0;
-#X connect 55 0 56 0;
-#X connect 55 0 65 0;
-#X connect 55 0 60 0;
-#X connect 56 0 52 0;
-#X connect 57 0 52 0;
-#X connect 60 0 62 0;
-#X connect 61 0 62 0;
-#X connect 63 0 56 0;
-#X connect 63 0 60 0;
-#X connect 64 0 63 0;
-#X connect 65 0 69 0;
-#X connect 66 0 53 1;
-#X connect 66 1 57 0;
-#X connect 66 1 61 0;
-#X connect 66 2 67 0;
-#X connect 67 0 65 1;
-#X connect 68 0 65 1;
-#X connect 69 0 53 0;
-#X connect 69 1 68 0;
-#X connect 71 0 72 0;
-#X connect 72 0 79 0;
-#X connect 73 0 72 0;
+#X connect 53 0 63 0;
+#X connect 53 0 58 0;
+#X connect 54 0 50 0;
+#X connect 55 0 50 0;
+#X connect 58 0 60 0;
+#X connect 59 0 60 0;
+#X connect 61 0 54 0;
+#X connect 61 0 58 0;
+#X connect 62 0 61 0;
+#X connect 63 0 67 0;
+#X connect 64 0 51 1;
+#X connect 64 1 55 0;
+#X connect 64 1 59 0;
+#X connect 64 2 65 0;
+#X connect 65 0 63 1;
+#X connect 66 0 63 1;
+#X connect 67 0 51 0;
+#X connect 67 1 66 0;
+#X connect 69 0 70 0;
+#X connect 70 0 77 0;
+#X connect 71 0 70 0;
+#X connect 72 0 73 0;
+#X connect 73 0 74 0;
 #X connect 74 0 75 0;
-#X connect 75 0 76 0;
-#X connect 76 0 77 0;
-#X connect 76 0 78 0;
-#X connect 77 0 26 0;
-#X connect 79 0 74 0;
-#X connect 81 0 96 0;
-#X connect 82 0 81 0;
+#X connect 74 0 76 0;
+#X connect 75 0 26 0;
+#X connect 77 0 72 0;
+#X connect 79 0 94 0;
+#X connect 80 0 79 0;
+#X connect 83 0 84 0;
+#X connect 84 0 39 0;
 #X connect 85 0 86 0;
-#X connect 86 0 41 0;
-#X connect 87 0 88 0;
-#X connect 88 0 41 0;
+#X connect 86 0 39 0;
+#X connect 89 0 90 0;
+#X connect 90 0 39 0;
 #X connect 91 0 92 0;
-#X connect 92 0 41 0;
-#X connect 93 0 94 0;
-#X connect 94 0 41 0;
-#X connect 95 0 107 1;
-#X connect 96 1 39 1;
-#X connect 96 2 107 0;
-#X connect 96 3 82 0;
+#X connect 92 0 39 0;
+#X connect 93 0 103 1;
+#X connect 94 1 37 1;
+#X connect 94 2 103 0;
+#X connect 94 3 80 0;
+#X connect 95 0 96 0;
+#X connect 96 0 39 0;
 #X connect 97 0 98 0;
-#X connect 98 0 41 0;
-#X connect 99 0 100 0;
-#X connect 100 0 41 0;
-#X connect 101 0 41 0;
-#X connect 103 0 101 0;
-#X connect 104 0 105 0;
-#X connect 105 0 41 0;
-#X connect 107 0 82 0;
-#X connect 107 0 39 1;
-#X connect 107 1 95 0;
-#X connect 110 0 114 0;
+#X connect 98 0 39 0;
+#X connect 99 0 39 0;
+#X connect 101 0 99 0;
+#X connect 103 0 80 0;
+#X connect 103 0 37 1;
+#X connect 103 1 93 0;
+#X connect 106 0 110 0;
+#X connect 108 0 109 0;
+#X connect 109 0 39 0;
+#X connect 110 0 39 0;
 #X connect 112 0 113 0;
-#X connect 113 0 41 0;
-#X connect 114 0 41 0;
+#X connect 113 0 39 0;
+#X connect 114 0 115 0;
+#X connect 115 0 39 0;
 #X connect 116 0 117 0;
-#X connect 117 0 41 0;
+#X connect 117 0 39 0;
+#X connect 122 0 121 0;
+#X connect 123 0 125 0;
+#X connect 124 0 123 0;
+#X connect 125 0 122 0;
+#X connect 125 0 119 0;
+#X connect 125 0 130 1;
+#X connect 128 0 127 0;
+#X connect 129 0 128 0;
+#X connect 130 0 129 0;
+#X connect 131 0 132 0;
+#X connect 132 0 130 0;
+#X connect 133 0 124 0;
+#X connect 135 0 136 0;
+#X connect 136 0 39 0;
+#X connect 138 0 139 0;
+#X connect 139 0 39 0;
+#X connect 140 0 141 0;
+#X connect 141 0 39 0;
 #X coords 0 -1 1 1 300 261 1 10 40;

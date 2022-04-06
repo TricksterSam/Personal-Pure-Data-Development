@@ -1,4 +1,4 @@
-#N canvas 938 134 1223 758 12;
+#N canvas 46 69 1223 758 12;
 #X obj 55 304 outlet~;
 #X obj 55 277 expr~ $v1 > $v2;
 #X msg 137 198 \$1 3;
@@ -37,7 +37,7 @@
 #X obj 162 43 cnv 15 20 20 empty \$1thr-r 75% 0 9 0 12 #dfdfdf #7c7c7c
 0;
 #X obj 10 42 cnv 15 58 20 empty \$1trigger_blink triggate 3 9 0 12
-#dfdfdf #7c7c7c 0;
+#7c7c7c #dfdfdf 0;
 #X connect 1 0 0 0;
 #X connect 1 0 22 0;
 #X connect 2 0 3 0;

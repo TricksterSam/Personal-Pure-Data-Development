@@ -1,4 +1,4 @@
-#N canvas 38 254 1081 730 12;
+#N canvas 662 179 1081 730 12;
 #X msg 268 184 bang;
 #X obj 108 125 select \$1;
 #X obj 108 52 int;
@@ -73,7 +73,7 @@
 #X text 598 379 samps \, ms \, voice;
 #X text 598 404 voice \, samps \, ms;
 #X obj 804 355 /;
-#X obj 792 543 clone sampvoice~ 32 \$1 \$2;
+#X obj 792 543 clone sampvoice~ 20 \$1 \$2;
 #X connect 0 0 6 1;
 #X connect 1 0 7 0;
 #X connect 2 0 3 0;
