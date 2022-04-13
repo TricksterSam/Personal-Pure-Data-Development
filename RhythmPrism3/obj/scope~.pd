@@ -1,6 +1,6 @@
 #N canvas 30 219 1261 748 12;
-#X obj 10 42 cnv 15 200 123 empty empty range~\\\ MIN\\\ &\\\ MAX 2
-9 0 12 #dfdfdf #606060 0;
+#X obj 10 42 cnv 15 200 123 empty empty scope~ 2 9 0 12 #dfdfdf #606060
+0;
 #X obj 300 42 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
 0;
 #X obj 300 52 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
@@ -43,7 +43,7 @@
 #X obj 602 380 outlet~;
 #N canvas 0 0 450 250 (subpatch) 0;
 #X array \$0scopescroll 128 float 2;
-#X coords 0 1 128 0 160 79 2 0 0;
+#X coords 0 1 128 -1 160 79 2 0 0;
 #X restore 10 62 graph;
 #N canvas 1062 148 776 626 scopes 0;
 #X obj 244 107 bang~;
@@ -75,22 +75,20 @@
 #X msg 377 315 \$1 4;
 #X obj 512 219 line~;
 #X msg 512 194 \$1 4;
-#X obj 110 143 cnv 15 39 20 empty \$1-max-display 10V 3 11 0 14 #dfdfdf
+#X obj 110 143 cnv 15 39 20 empty \$1-max-display 6V 3 11 0 14 #dfdfdf
 #7c7c7c 0;
 #X obj 235 435 s \$1-max-display;
 #X msg 235 395 label \$1V;
 #X obj 235 328 int;
 #X obj 235 303 * 10000;
 #X obj 235 353 / 1000;
-#X obj 50 143 cnv 15 39 20 empty \$1-min-display 0V 3 11 0 14 #dfdfdf
+#X obj 50 143 cnv 15 39 20 empty \$1-min-display 4.002V 3 11 0 14 #dfdfdf
 #7c7c7c 0;
-#X msg 105 305 label \$1V;
-#X obj 105 238 int;
-#X obj 105 213 * 10000;
-#X obj 105 263 / 1000;
-#X obj 105 345 s \$1-min-display;
-#X obj 190 62 abs/vslidermem \$1-max \  0 20 100;
-#X obj 170 62 abs/vslidermem \$1-min \  0 20 100;
+#X msg 98 383 label \$1V;
+#X obj 98 316 int;
+#X obj 98 291 * 10000;
+#X obj 98 341 / 1000;
+#X obj 98 423 s \$1-min-display;
 #X obj 621 171 vsl 38 14 0 127 0 0 \$1polarity-s empty empty 0 -9 0
 10 #fcfcfc #000000 #000000 0 0;
 #X obj 620 169 cnv 15 39 20 empty \$1polarity-r + 2 9 0 12 #404040
@@ -143,12 +141,12 @@
 #X msg 588 271 0;
 #X obj 494 277 +~;
 #X msg 628 271 -1;
-#X obj 495 383 abs~;
+#X obj 517 380 abs~;
 #X obj 330 150 s \$1-scope;
 #X obj 330 102 - 1;
 #X obj 330 127 abs;
-#X obj 10 42 cnv 15 200 19 empty empty range~\\\ MIN\\\ &\\\ MAX 2
-9 0 12 #dfdfdf #606060 0;
+#X obj 10 42 cnv 15 200 19 empty empty scope~ 2 9 0 12 #dfdfdf #606060
+0;
 #X obj 170 42 abs/button20 \$1scope w DISP 1;
 #N canvas 1002 358 609 440 drawscope 0;
 #X obj 163 212 array get \$0scopesub;
@@ -162,15 +160,26 @@
 #X restore 906 232 pd drawscope;
 #X obj 789 84 r \$1-scope;
 #X floatatom 789 109 5 0 0 0 - - - 0;
+#X obj 344 203 * 2;
+#X obj 344 228 - 1;
+#X floatatom 433 331 5 0 0 0 - - - 0;
+#X obj 10 101 cnv 1 160 1 empty empty empty 20 12 0 14 #7c7c7c #404040
+0;
+#X floatatom 154 199 5 0 0 0 - - - 0;
+#X floatatom 222 217 5 0 0 0 - - - 0;
+#X obj 170 62 abs/vslidermem \$1-min \  0.5 20 100;
+#X obj 190 62 abs/vslidermem \$1-max \  1 20 100;
+#X obj 291 199 * 2;
+#X obj 291 224 - 1;
 #X connect 20 0 25 1;
-#X connect 24 0 59 0;
-#X connect 25 0 56 0;
+#X connect 24 0 57 0;
+#X connect 25 0 54 0;
 #X connect 26 0 27 0;
 #X connect 26 1 27 1;
 #X connect 27 0 29 0;
+#X connect 27 0 70 0;
 #X connect 28 0 25 0;
 #X connect 29 0 28 0;
-#X connect 30 0 24 1;
 #X connect 31 0 30 0;
 #X connect 34 0 33 0;
 #X connect 35 0 37 0;
@@ -180,29 +189,35 @@
 #X connect 40 0 42 0;
 #X connect 41 0 40 0;
 #X connect 42 0 39 0;
-#X connect 44 0 27 0;
-#X connect 44 0 36 0;
-#X connect 45 0 31 0;
-#X connect 45 0 41 0;
-#X connect 45 0 26 0;
-#X connect 48 0 49 0;
-#X connect 48 0 50 0;
-#X connect 51 0 53 0;
-#X connect 51 0 58 0;
-#X connect 51 0 55 0;
-#X connect 51 1 54 0;
-#X connect 51 1 60 0;
-#X connect 51 1 57 0;
-#X connect 53 0 52 0;
-#X connect 54 0 52 0;
-#X connect 56 0 24 0;
-#X connect 58 0 59 1;
-#X connect 59 0 21 0;
-#X connect 59 0 61 0;
-#X connect 60 0 59 1;
-#X connect 61 0 23 0;
-#X connect 63 0 64 0;
-#X connect 64 0 62 0;
-#X connect 66 0 63 0;
+#X connect 46 0 47 0;
+#X connect 46 0 48 0;
+#X connect 49 0 51 0;
+#X connect 49 0 56 0;
+#X connect 49 0 53 0;
+#X connect 49 1 52 0;
+#X connect 49 1 58 0;
+#X connect 49 1 55 0;
+#X connect 51 0 50 0;
+#X connect 52 0 50 0;
+#X connect 54 0 24 0;
+#X connect 56 0 57 1;
+#X connect 57 0 21 0;
+#X connect 57 0 59 0;
+#X connect 57 0 23 0;
+#X connect 58 0 57 1;
+#X connect 61 0 62 0;
+#X connect 62 0 60 0;
+#X connect 64 0 61 0;
+#X connect 66 0 67 0;
 #X connect 68 0 69 0;
+#X connect 69 0 26 0;
+#X connect 69 0 41 0;
+#X connect 74 0 31 0;
+#X connect 74 0 68 0;
+#X connect 74 0 72 0;
+#X connect 75 0 73 0;
+#X connect 75 0 76 0;
+#X connect 76 0 77 0;
+#X connect 77 0 27 0;
+#X connect 77 0 36 0;
 #X coords 0 -1 1 1 200 129 1 10 40;

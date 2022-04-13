@@ -47,7 +47,7 @@
 0;
 #X obj 120 85 cnv 15 38 20 empty empty 4pul 2 9 0 12 #7c7c7c #dfdfdf
 0;
-#X obj 120 3 cnv 15 38 19 empty \$1hz-r 0\  2 9 0 12 #dfdfdf #7c7c7c
+#X obj 120 3 cnv 15 38 19 empty \$1hz-r 4.233\  2 9 0 12 #dfdfdf #7c7c7c
 0;
 #X obj 55 406 phasor~;
 #X obj 162 309 loadbang;
@@ -278,7 +278,6 @@
 #X obj 107 802 +~;
 #X obj 144 777 *~;
 #X obj 144 802 +~;
-#X obj 17 500 expr~ ((sin($v1 * 8 * atan(1))) + 1) * 0.5;
 #X floatatom 627 612 5 0 0 0 - - - 0;
 #X floatatom 620 549 5 0 0 0 - - - 0;
 #X obj 627 587 expr (29 * (($f1 * 2) - 1))+1;
@@ -310,6 +309,7 @@
 #X floatatom 330 315 5 0 0 0 - - - 0;
 #X obj 100 42 abs/hslidermem \$1-width WID 0.5 60 20;
 #X obj 100 63 abs/hslidermem \$1phase1 PHA 0 60 20;
+#X obj 17 500 expr~ ((cos($v1 * 8 * atan(1))) + 1) * 0.5;
 #X connect 25 0 50 0;
 #X connect 25 0 60 0;
 #X connect 26 0 27 0;
@@ -333,7 +333,7 @@
 #X connect 46 0 25 1;
 #X connect 47 0 46 0;
 #X connect 50 0 78 0;
-#X connect 52 0 98 0;
+#X connect 52 0 97 0;
 #X connect 53 0 52 1;
 #X connect 54 0 53 0;
 #X connect 57 0 58 0;
@@ -341,9 +341,9 @@
 #X connect 59 0 74 0;
 #X connect 60 0 57 0;
 #X connect 60 0 76 0;
-#X connect 60 0 80 0;
-#X connect 63 0 85 0;
-#X connect 63 0 86 1;
+#X connect 60 0 106 0;
+#X connect 63 0 84 0;
+#X connect 63 0 85 1;
 #X connect 64 0 71 0;
 #X connect 65 0 66 1;
 #X connect 65 0 74 1;
@@ -369,28 +369,28 @@
 #X connect 77 0 55 0;
 #X connect 78 0 79 0;
 #X connect 79 0 56 0;
-#X connect 80 0 66 0;
-#X connect 82 0 83 0;
-#X connect 83 0 81 0;
-#X connect 85 0 86 0;
-#X connect 86 0 39 0;
-#X connect 86 0 25 0;
-#X connect 86 0 102 0;
-#X connect 87 0 63 0;
-#X connect 88 0 93 0;
-#X connect 89 0 90 0;
-#X connect 90 0 52 0;
-#X connect 92 0 63 1;
-#X connect 93 0 85 1;
-#X connect 94 0 93 1;
+#X connect 81 0 82 0;
+#X connect 82 0 80 0;
+#X connect 84 0 85 0;
+#X connect 85 0 39 0;
+#X connect 85 0 25 0;
+#X connect 85 0 101 0;
+#X connect 86 0 63 0;
+#X connect 87 0 92 0;
+#X connect 88 0 89 0;
+#X connect 89 0 52 0;
+#X connect 91 0 63 1;
+#X connect 92 0 84 1;
+#X connect 93 0 92 1;
+#X connect 94 0 93 0;
 #X connect 95 0 94 0;
-#X connect 96 0 95 0;
-#X connect 97 0 60 1;
-#X connect 98 0 50 1;
-#X connect 98 0 97 0;
-#X connect 99 0 96 0;
+#X connect 96 0 60 1;
+#X connect 97 0 50 1;
+#X connect 97 0 96 0;
+#X connect 98 0 95 0;
+#X connect 101 0 102 0;
 #X connect 102 0 103 0;
-#X connect 103 0 104 0;
-#X connect 105 0 54 0;
-#X connect 106 0 46 1;
+#X connect 104 0 54 0;
+#X connect 105 0 46 1;
+#X connect 106 0 66 0;
 #X coords 0 -1 1 1 160 108 2 0 0;

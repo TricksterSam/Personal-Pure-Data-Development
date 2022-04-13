@@ -43,8 +43,8 @@ empty 0 -8 0 10 #404040 #dfdfdf #dfdfdf 0;
 0;
 #X obj 15 112 nbx 6 20 -10 10 0 0 \$1slider-min-s \$1slider-min-r MIN
 70 10 0 10 #404040 #dfdfdf #404040 0 10;
-#X obj 15 70 cnv 15 143 40 empty \$1slider-scaled-r 0V 10 20 0 20 #404040
-#dfdfdf 0;
+#X obj 15 70 cnv 15 143 40 empty \$1slider-scaled-r 0.5V 10 20 0 20
+#404040 #dfdfdf 0;
 #X obj 117 112 nbx 6 20 -10 10 0 0 \$1slider-max-s \$1slider-max-r
 MAX 70 10 0 10 #404040 #dfdfdf #404040 0 10;
 #X restore 63 123 pd \$1-cvxattenuation;
@@ -217,8 +217,8 @@ MAX 70 10 0 10 #404040 #dfdfdf #404040 0 10;
 #404040 0;
 #X obj 9 9 cnv 5 15 2 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
-#X obj 13 10 hsl 35 20 0 1 0 0 \$1slider-s \$1slider-r PHA 3 10 0 18
-#404040 #dfdfdf #7c7c7c 0 1;
+#X obj 13 10 hsl 35 20 0 1 0 0 \$1slider-s \$1slider-r TRANSP 2 10
+0 18 #404040 #dfdfdf #7c7c7c 0 1;
 #X obj 697 591 s \$1-disp-r;
 #X obj 697 517 int;
 #X obj 697 492 * 10000;
@@ -477,4 +477,4 @@ MAX 70 10 0 10 #404040 #dfdfdf #404040 0 10;
 #X connect 83 0 15 0;
 #X connect 84 0 83 0;
 #X connect 85 0 8 0;
-#X coords 0 -1 1 1 60 20 2 10 10;
+#X coords 0 800 1 799 60 20 0;
