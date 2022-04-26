@@ -2,41 +2,41 @@
 #X obj 10 8 inlet~ cv+;
 #X obj 10 42 cnv 15 200 82 empty empty range_note~\\\ MIN\\\ &\\\ MAX\\\ NOTES
 2 9 0 12 #dfdfdf #606060 0;
-#X obj 290 42 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 290 42 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 290 52 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 290 52 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 290 62 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 290 62 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 290 72 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 290 72 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 290 82 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 290 82 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 290 92 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 290 92 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 290 102 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 290 102 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 290 112 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 290 112 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 290 122 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 290 122 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 290 132 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 290 132 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 240 42 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 240 42 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 240 62 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 240 62 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 240 82 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 240 82 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 240 103 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 240 103 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 240 124 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 240 124 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 240 144 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 240 144 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 240 164 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 240 164 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 240 184 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 240 184 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #606060
 0;
 #X obj 11 62 cnv 15 38 20 empty empty 1cv+ 4 9 0 12 #7c7c7c #dfdfdf
 0;

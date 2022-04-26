@@ -1,6 +1,6 @@
 #N canvas 241 1146 1388 800 12;
-#X obj 10 12 vsl 20 33 0 1 0 0 \$1slider-s \$1slider-r S 5 11 0 18
-#404040 #dfdfdf #7c7c7c 0 1;
+#X obj 10 12 vsl 20 53 0 1 0 0 \$1slider-s \$1slider-r S 5 11 0 12
+#606060 #dfdfdf #9f9f9f 0 1;
 #N canvas 290 232 883 779 xsettings 0;
 #X obj 63 11 r \$1xset-s;
 #X obj 569 45 r \$1xmidiclear-s;
@@ -15,69 +15,69 @@
 #X obj 455 101 s_ctlparam \$1xctln;
 #X obj 578 18 r \$1xctlcur-s;
 #N canvas 1463 24 354 159 \$1-cvxattenuation 0;
-#X obj 10 10 cnv 15 200 132 empty empty empty 20 12 0 14 #404040 #404040
+#X obj 10 10 cnv 15 200 132 empty empty empty 20 12 0 14 #606060 #606060
 0;
 #X obj 11 11 cnv 15 198 130 empty empty Assign\\\ MIDI\\\ Ctl 2 6 0
-12 #dfdfdf #404040 0;
+12 #dfdfdf #606060 0;
 #X obj 64 31 bng 15 250 50 0 \$1xmidiset-s \$1xmidiset-r set=> 17 8
-0 10 #404040 #dfdfdf #000000;
+0 10 #606060 #dfdfdf #000000;
 #X obj 64 51 bng 15 250 50 0 \$1xmidiclear-s \$1xmidiclear-r clear
-17 8 0 10 #404040 #dfdfdf #000000;
-#X obj 113 30 cnv 15 53 17 empty empty ctl 28 9 0 10 #dfdfdf #404040
+17 8 0 10 #606060 #dfdfdf #000000;
+#X obj 113 30 cnv 15 53 17 empty empty ctl 28 9 0 10 #dfdfdf #606060
 0;
 #X floatatom 113 30 4 0 127 3 - \$1xctln-r \$1xctln-s 10;
-#X obj 113 50 cnv 15 45 17 empty empty val 28 9 0 10 #dfdfdf #404040
+#X obj 113 50 cnv 15 45 17 empty empty val 28 9 0 10 #dfdfdf #606060
 0;
 #X floatatom 113 50 4 0 127 3 - \$1xval-r \$1xval-s 10;
-#X obj 15 30 cnv 15 43 17 empty empty ==> 28 9 0 10 #dfdfdf #404040
+#X obj 15 30 cnv 15 43 17 empty empty ==> 28 9 0 10 #dfdfdf #606060
 0;
 #X floatatom 15 30 4 0 127 3 - \$1xctlcur-r \$1xctlcur-s 10;
-#X obj 15 50 cnv 15 43 17 empty empty current 0 4 0 10 #dfdfdf #404040
+#X obj 15 50 cnv 15 43 17 empty empty current 0 4 0 10 #dfdfdf #606060
 0;
 #X obj 15 72 nbx 5 38 0 100 0 0 \$1slider-disp-s \$1slider-disp-r empty
-0 -8 0 28 #404040 #dfdfdf #000000 0 256;
+0 -8 0 28 #606060 #dfdfdf #000000 0 256;
 #X obj 163 50 vradio 20 1 0 3 \$1slider-curve-s \$1-slider-curve-r
-empty 0 -8 0 10 #404040 #dfdfdf #dfdfdf 0;
-#X obj 185 52 cnv 15 20 20 empty empty LIN 0 6 0 12 #dfdfdf #404040
+empty 0 -8 0 10 #606060 #dfdfdf #dfdfdf 0;
+#X obj 185 52 cnv 15 20 20 empty empty LIN 0 6 0 12 #dfdfdf #606060
 0;
-#X obj 185 73 cnv 15 20 20 empty empty EXP 0 6 0 12 #dfdfdf #404040
+#X obj 185 73 cnv 15 20 20 empty empty EXP 0 6 0 12 #dfdfdf #606060
 0;
-#X obj 185 93 cnv 15 20 20 empty empty LOG 0 6 0 12 #dfdfdf #404040
+#X obj 185 93 cnv 15 20 20 empty empty LOG 0 6 0 12 #dfdfdf #606060
 0;
 #X obj 15 112 nbx 6 20 -10 10 0 0 \$1slider-min-s \$1slider-min-r MIN
-70 10 0 10 #404040 #dfdfdf #404040 0 10;
+70 10 0 10 #606060 #dfdfdf #606060 0 10;
 #X obj 15 70 cnv 15 143 40 empty \$1slider-scaled-r 10V 10 20 0 20
-#404040 #dfdfdf 0;
+#606060 #dfdfdf 0;
 #X obj 117 112 nbx 6 20 -10 10 0 0 \$1slider-max-s \$1slider-max-r
-MAX 70 10 0 10 #404040 #dfdfdf #404040 0 10;
+MAX 70 10 0 10 #606060 #dfdfdf #606060 0 10;
 #X restore 63 123 pd \$1-cvxattenuation;
 #X msg 63 84 \; pd-\$1-cvxattenuation vis 1;
 #X obj 64 218 r \$1+set-s;
 #X msg 64 268 \; pd-\$1-cv+offset vis 1;
 #N canvas 725 72 184 187 \$1-cv+offset 0;
-#X obj 10 10 cnv 15 160 152 empty empty empty 20 12 0 14 #404040 #404040
+#X obj 10 10 cnv 15 160 152 empty empty empty 20 12 0 14 #606060 #606060
 0;
 #X obj 11 11 cnv 15 158 150 empty empty Assign\\\ MIDI\\\ Ctl 2 6 0
-12 #dfdfdf #404040 0;
+12 #dfdfdf #606060 0;
 #X obj 66 29 bng 15 250 50 0 \$1+midiset-s \$1+midiset-r set=> 17 8
-0 10 #404040 #dfdfdf #000000;
+0 10 #606060 #dfdfdf #000000;
 #X obj 66 50 bng 15 250 50 0 \$1+midiclear-s \$1+midiclear-r clear
-17 8 0 10 #404040 #dfdfdf #000000;
-#X obj 115 28 cnv 15 53 17 empty empty ctl# 28 9 0 10 #dfdfdf #404040
+17 8 0 10 #606060 #dfdfdf #000000;
+#X obj 115 28 cnv 15 53 17 empty empty ctl# 28 9 0 10 #dfdfdf #606060
 0;
 #X floatatom 115 28 4 0 127 3 - \$1+ctln-r \$1+ctln-s 10;
-#X obj 115 49 cnv 15 45 17 empty empty val 28 9 0 10 #dfdfdf #404040
+#X obj 115 49 cnv 15 45 17 empty empty val 28 9 0 10 #dfdfdf #606060
 0;
 #X floatatom 115 49 4 0 127 3 - \$1+val-r \$1+val-s 10;
-#X obj 17 28 cnv 15 43 17 empty empty ==> 28 9 0 10 #dfdfdf #404040
+#X obj 17 28 cnv 15 43 17 empty empty ==> 28 9 0 10 #dfdfdf #606060
 0;
 #X floatatom 17 28 4 0 127 3 - \$1+ctlcur-r \$1+ctlcur-s 10;
-#X obj 17 48 cnv 15 43 17 empty empty current 0 4 0 10 #dfdfdf #404040
+#X obj 17 48 cnv 15 43 17 empty empty current 0 4 0 10 #dfdfdf #606060
 0;
 #X obj 17 117 tgl 40 0 \$1+polar-s \$1+polar-r uni-/bi-polar 44 19
-0 10 #404040 #dfdfdf #000000 0 1;
+0 10 #606060 #dfdfdf #000000 0 1;
 #X obj 17 72 nbx 5 40 0 1 0 0 \$1-offset-s \$1-offset-r empty 0 -8
-0 28 #404040 #dfdfdf #000000 0 256;
+0 28 #606060 #dfdfdf #000000 0 256;
 #X restore 64 307 pd \$1-cv+offset;
 #X obj 39 175 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
@@ -148,12 +148,12 @@ MAX 70 10 0 10 #404040 #dfdfdf #404040 0 10;
 #X obj 202 6 inlet;
 #X obj 252 287 s \$1slider-r;
 #X obj 24 397 namecanvas \$1vslidermem;
-#X obj 10 51 vsl 20 14 0 127 0 0 \$1xset-s \$1xset-r empty 0 -9 0 10
+#X obj 10 71 vsl 20 14 0 127 0 0 \$1xset-s \$1xset-r empty 0 -9 0 10
 #fcfcfc #202020 #606060 0 0;
-#X obj 10 50 cnv 6 20 20 empty \$1setcavas-r SET 2 11 0 10 #dfdfdf
+#X obj 10 70 cnv 6 20 20 empty \$1setcavas-r SET 2 11 0 10 #dfdfdf
 #7c7c7c 0;
 #X obj 372 276 symbol \$1slider;
-#X obj 9 9 cnv 5 15 2 empty empty empty 20 12 0 14 #e0e0e0 #404040
+#X obj 9 9 cnv 5 15 2 empty empty empty 20 12 0 14 #e0e0e0 #606060
 0;
 #X obj 77 430 outlet interpolated;
 #N canvas 144 128 826 702 filechecker 0;
@@ -516,4 +516,4 @@ MAX 70 10 0 10 #404040 #dfdfdf #404040 0 10;
 #X connect 75 0 76 0;
 #X connect 79 0 9 0;
 #X connect 80 0 65 0;
-#X coords 0 -1 1 1 20 60 2 10 10;
+#X coords 0 -1 1 1 20 80 2 10 10;

@@ -21,8 +21,8 @@
 #X obj 249 229 outlet;
 #X obj 188 -3 inlet;
 #X msg 183 74 bang;
-#X msg 211 135 color #404040 #dfdfdf #dfdfdf;
-#X msg 210 164 color #7c7c7c #dfdfdf #dfdfdf;
+#X msg 211 135 color #606060 #dfdfdf #dfdfdf;
+#X msg 210 164 color #9f9f9f #dfdfdf #606060;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 1 7 0;
@@ -36,7 +36,7 @@
 #X restore 155 109 pd color;
 #X floatatom 219 83 5 0 0 0 - - - 0;
 #X obj 180 53 allmem \$1-\$2-fine \$2;
-#X obj 0 0 tgl 20 0 empty empty empty 17 7 0 10 #404040 #dfdfdf #dfdfdf
+#X obj 0 0 tgl 20 0 empty empty empty 17 7 0 10 #9f9f9f #dfdfdf #606060
 0 1;
 #X obj 375 3 r \$1rand-s;
 #X obj 375 33 random 2;

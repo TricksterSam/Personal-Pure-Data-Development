@@ -1,4 +1,4 @@
-#N canvas 33 128 921 711 12;
+#N canvas 616 61 921 711 12;
 #X obj 614 23 r \$1-type;
 #X obj 207 352 int;
 #X msg 207 376 label \$1\\\ ;
@@ -21,7 +21,7 @@
 #X msg 95 165 set \$1;
 #X obj 13 240 hsl 14 20 0 100 0 0 empty empty empty 2 11 0 14 #dfdfdf
 #7c7c7c #7c7c7c 0 0;
-#X obj 10 240 cnv 15 20 20 empty \$1-\$2-toggle-r -- 2 11 0 14 #dfdfdf
+#X obj 10 240 cnv 15 20 20 empty \$1-\$2-toggle-r -- 1 11 0 14 #dfdfdf
 #7c7c7c 0;
 #X obj 10 291 t b b;
 #X msg 42 313 stop;
@@ -40,7 +40,7 @@
 #X msg 287 304 0.5;
 #X obj 10 262 vsl 20 15 0 127 0 0 \$1-\$2-trigger-s empty empty 0 -9
 0 10 #fcfcfc #000000 #000000 0 0;
-#X obj 10 260 cnv 15 20 20 empty \$1-\$2-trigger-r sel 2 9 0 12 #dfdfdf
+#X obj 10 260 cnv 15 20 20 empty \$1-\$2-trigger-r sel 1 9 0 12 #dfdfdf
 #7c7c7c 0;
 #X obj 386 506 s \$1-\$2-trigger-r;
 #X msg 357 466 color #7c7c7c #dfdfdf #dfdfdf;
@@ -74,7 +74,7 @@
 #X obj 249 229 outlet;
 #X obj 188 -3 inlet;
 #X msg 183 74 bang;
-#X msg 211 135 color #404040 #404040 #dfdfdf;
+#X msg 211 135 color #606060 #606060 #dfdfdf;
 #X msg 210 164 color #7c7c7c #7c7c7c #dfdfdf;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
@@ -99,10 +99,10 @@
 #X obj 630 474 f;
 #X obj 630 500 expr if ($f2 == 1 \, $f1 \, 0.1 - $f1);
 #X msg 37 585 color #dfdfdf #7c7c7c #7c7c7c \, label --;
-#X obj 10 203 vsl 20 15 -4 5 0 0 empty empty 0\  1 11 0 11 #404040
-#404040 #dfdfdf 0 1;
-#X obj 10 224 vsl 20 15 0 100 0 0 empty empty 7\  1 11 0 9 #404040
-#404040 #dfdfdf 0 1;
+#X obj 10 203 vsl 20 15 -4 5 0 0 empty empty 0\  1 11 0 11 #606060
+#606060 #dfdfdf 0 1;
+#X obj 10 224 vsl 20 15 0 100 0 0 empty empty 0\  1 11 0 9 #606060
+#606060 #dfdfdf 0 1;
 #X floatatom 547 267 5 0 0 0 - - - 0;
 #X connect 0 0 15 0;
 #X connect 1 0 2 0;

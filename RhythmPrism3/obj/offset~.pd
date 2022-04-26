@@ -16,7 +16,7 @@
 #X obj 148 211 * 0.01;
 #X obj 110 45 vsl 39 15 0 127 0 0 empty empty empty 0 -9 0 10 #fcfcfc
 #000000 #000000 0 0;
-#X obj 110 43 cnv 15 40 20 empty \$1offset-disp-r 4n|5o 1 9 0 12 #dfdfdf
+#X obj 110 43 cnv 15 40 20 empty \$1offset-disp-r 0V 1 9 0 12 #dfdfdf
 #7c7c7c 0;
 #X msg 305 434 label \$1V;
 #X obj 305 347 int;
@@ -44,6 +44,12 @@
 #X obj 395 338 t f f;
 #X obj 355 343 int;
 #X obj 355 368 / 120;
+#X obj 10 64 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
+#X obj 10 40 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
+#X obj 142 40 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
 #X connect 0 0 3 0;
 #X connect 3 0 2 0;
 #X connect 4 0 5 0;

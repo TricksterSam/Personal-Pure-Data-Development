@@ -16,10 +16,8 @@
 #X msg 351 367 label MAX;
 #X obj 184 13 inlet~ cv+1 threshold;
 #X obj 10 8 inlet~ cv+-;
-#X obj 10 44 vsl 58 15 0 127 0 0 \$1trigger_env empty empty 0 -9 0
+#X obj 10 42 vsl 68 15 0 127 0 0 \$1trigger_env empty empty 0 -9 0
 10 #fcfcfc #000000 #000000 0 0;
-#X msg 47 518 color #dfdfdf #7c7c7c #7c7c7c;
-#X msg 75 489 color #7c7c7c #dfdfdf #dfdfdf;
 #X obj 75 546 s \$1trigger_blink;
 #X obj 129 347 change;
 #X obj 129 321 env~;
@@ -31,15 +29,23 @@
 #X obj 295 145 +;
 #X obj 295 170 mod 2;
 #X obj 295 195 sig~;
-#X obj 10 42 cnv 15 180 20 empty empty triggate~ 3 9 0 12 #dfdfdf #7c7c7c
+#X obj 10 40 cnv 15 180 20 empty empty triggate~ 3 9 0 12 #dfdfdf #606060
 0;
-#X obj 79 43 abs/hslidermem \$1-hsl THR 0.5 80 20;
-#X obj 162 43 cnv 15 20 20 empty \$1thr-r 75% 0 9 0 12 #dfdfdf #7c7c7c
+#X obj 79 40 abs/hslidermem \$1-hsl THR 0.5 80 20;
+#X obj 162 40 cnv 15 20 20 empty \$1thr-r 50% 0 9 0 12 #dfdfdf #606060
 0;
-#X obj 10 42 cnv 15 58 20 empty \$1trigger_blink triggate 3 9 0 12
-#7c7c7c #dfdfdf 0;
+#X obj 10 40 cnv 15 68 20 empty \$1trigger_blink triggate~ 3 9 0 12
+#dfdfdf #9f9f9f 0;
+#X msg 75 489 color #9f9f9f #dfdfdf #dfdfdf;
+#X msg 47 518 color #dfdfdf #9f9f9f #9f9f9f;
+#X obj 10 58 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
+#X obj 10 40 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
+#X obj 182 40 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
 #X connect 1 0 0 0;
-#X connect 1 0 22 0;
+#X connect 1 0 20 0;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
 #X connect 4 0 1 1;
@@ -57,19 +63,19 @@
 #X connect 14 0 5 0;
 #X connect 15 0 4 1;
 #X connect 16 0 1 0;
-#X connect 18 0 20 0;
-#X connect 19 0 20 0;
-#X connect 21 0 23 0;
-#X connect 22 0 21 0;
-#X connect 23 0 18 0;
-#X connect 23 1 19 0;
-#X connect 24 0 25 0;
-#X connect 25 0 27 0;
-#X connect 26 0 24 0;
+#X connect 19 0 21 0;
+#X connect 20 0 19 0;
+#X connect 21 0 34 0;
+#X connect 21 1 33 0;
+#X connect 22 0 23 0;
+#X connect 23 0 25 0;
+#X connect 24 0 22 0;
+#X connect 25 0 26 0;
+#X connect 26 0 27 0;
+#X connect 27 0 26 1;
 #X connect 27 0 28 0;
-#X connect 28 0 29 0;
-#X connect 29 0 28 1;
-#X connect 29 0 30 0;
-#X connect 30 0 1 0;
-#X connect 32 0 2 0;
-#X coords 0 -1 1 1 180 25 2 10 40;
+#X connect 28 0 1 0;
+#X connect 30 0 2 0;
+#X connect 33 0 18 0;
+#X connect 34 0 18 0;
+#X coords 0 -1 1 1 180 20 2 10 40;

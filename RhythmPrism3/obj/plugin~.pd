@@ -1,43 +1,42 @@
-#N struct 1711-button float x float y float id;
 #N canvas 416 75 1280 890 12;
 #X declare -lib vstplugin~;
-#X obj 0 2 cnv 15 240 142 empty empty plugin~\\\ VST\\\ WRAPPER 2 9
-0 12 #dfdfdf #606060 0;
-#X obj 290 2 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 0 0 cnv 15 240 140 empty empty plugin~\ VST\ WRAPPER 2 30 0
+12 #dfdfdf #606060 0;
+#X obj 290 2 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 290 12 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 290 12 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 290 22 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 290 22 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 290 32 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 290 32 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 290 42 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 290 42 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 290 52 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 290 52 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 290 62 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 290 62 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 290 72 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 290 72 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 290 82 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 290 82 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 290 92 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 290 92 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 260 2 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 260 2 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 260 23 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 260 23 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 260 44 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 260 44 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 260 65 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 260 65 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 260 86 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 260 86 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 260 107 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 260 107 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 260 128 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 260 128 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 260 149 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 260 149 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #606060
 0;
 #X obj 175 251 declare -lib vstplugin~;
 #N canvas 241 280 450 376 \$0-open 0;
@@ -103,31 +102,31 @@
 1 \; \$1-path-label symbol \; \$1-height 20;
 #X obj 376 327 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 0 42 bng 20 250 50 0 \$0-plugins-show empty show VSTs 22 10
-0 10 #404040 #dfdfdf #7c7c7c;
-#X obj 0 62 bng 20 250 50 0 \$0-search empty search dirs 22 10 0
-10 #404040 #dfdfdf #7c7c7c;
-#X obj 0 82 bng 20 250 50 0 \$0-file empty manual\\\ load 22 10 0 10
-#404040 #dfdfdf #7c7c7c;
-#X obj 90 42 tgl 20 0 \$0-editor \$0-editor editor 22 10 0 10 #dfdfdf
-#404040 #7c7c7c 0 1;
-#X obj 220 102 bng 20 250 50 0 \$0-open empty open -26 10 0 10 #404040
+#X obj 0 40 bng 20 250 50 0 \$0-plugins-show empty show VSTs 22 10
+0 10 #606060 #dfdfdf #7c7c7c;
+#X obj 0 60 bng 20 250 50 0 \$0-search empty search dirs 22 10 0
+10 #606060 #dfdfdf #7c7c7c;
+#X obj 0 80 bng 20 250 50 0 \$0-file empty manual\\\ load 22 10 0 10
+#606060 #dfdfdf #7c7c7c;
+#X obj 90 40 tgl 20 0 \$0-editor \$0-editor editor 22 10 0 10 #dfdfdf
+#606060 #7c7c7c 0 1;
+#X obj 220 100 bng 20 250 50 0 \$0-open empty open -26 10 0 10 #606060
 #dfdfdf #7c7c7c;
-#X symbolatom 98 123 20 0 0 0 - \$0-path \$0-path-out 0;
-#X obj 90 82 tgl 20 0 \$0-threaded \$0-threaded threaded 22 10 0 10
-#dfdfdf #404040 #7c7c7c 0 1;
-#X obj 170 42 vradio 20 1 0 3 \$0-mode \$0-mode empty 0 -8 0 10 #dfdfdf
-#404040 #7c7c7c 0;
-#X obj 192 52 cnv 5 1 1 empty empty normal 0 0 0 10 #dfdfdf #7c7c7c
+#X symbolatom 98 121 20 0 0 0 - \$0-path \$0-path-out 0;
+#X obj 90 80 tgl 20 0 \$0-threaded \$0-threaded threaded 22 10 0 10
+#dfdfdf #606060 #7c7c7c 0 1;
+#X obj 170 40 vradio 20 1 0 3 \$0-mode \$0-mode empty 0 -8 0 10 #dfdfdf
+#606060 #7c7c7c 0;
+#X obj 192 50 cnv 5 1 1 empty empty normal 0 0 0 10 #dfdfdf #7c7c7c
 0;
-#X obj 192 92 cnv 5 1 1 empty empty bridge 0 0 0 10 #dfdfdf #7c7c7c
+#X obj 192 90 cnv 5 1 1 empty empty bridge 0 0 0 10 #dfdfdf #7c7c7c
 0;
-#X obj 192 71 cnv 5 1 1 empty empty sandbox 0 0 0 10 #dfdfdf #7c7c7c
+#X obj 192 69 cnv 5 1 1 empty empty sandbox 0 0 0 10 #dfdfdf #7c7c7c
 0;
-#X obj 90 62 tgl 20 0 \$0-async \$0-async async 22 10 0 10 #dfdfdf
-#404040 #7c7c7c 0 1;
-#X obj 0 102 bng 20 250 50 0 \$0-clear-cache empty clear cache 22
-10 0 10 #404040 #dfdfdf #7c7c7c;
+#X obj 90 60 tgl 20 0 \$0-async \$0-async async 22 10 0 10 #dfdfdf
+#606060 #7c7c7c 0 1;
+#X obj 0 100 bng 20 250 50 0 \$0-clear-cache empty clear cache 22
+10 0 10 #606060 #dfdfdf #7c7c7c;
 #N canvas 742 179 684 612 \$0-search 0;
 #X obj 46 36 r \$0-search;
 #X obj 46 83 list trim;
@@ -1680,7 +1679,7 @@ categories...;
 #X connect 60 1 59 0;
 #X connect 60 2 17 0;
 #X restore 150 332 pd \$0-search;
-#N canvas 379 344 514 435 \$0-plugins 0;
+#N canvas 72 265 599 651 \$0-plugins 0;
 #N canvas 435 260 711 403 \$0-filter 0;
 #X symbolatom 111 123 28 0 0 2 Keyword \$0-filter-keyword-in \$0-filter-keyword-out
 0;
@@ -1693,11 +1692,11 @@ categories...;
 ‹ 4 7 0 14 #fcfcfc #000000 #000000;
 #X obj 511 156 bng 15 250 50 0 \$0-filter-category-plus \$0-dummy ›
 4 7 0 14 #fcfcfc #000000 #000000;
-#X obj 292 123 cnv 15 170 15 empty empty empty 20 12 0 14 #e0e0e0 #404040
+#X obj 292 123 cnv 15 170 15 empty empty empty 20 12 0 14 #e0e0e0 #606060
 0;
 #X symbolatom 292 123 28 0 0 2 Vendor \$0-filter-vendor-label \$0-filter-vendor-out
 0;
-#X obj 292 156 cnv 15 170 15 empty empty empty 20 12 0 14 #e0e0e0 #404040
+#X obj 292 156 cnv 15 170 15 empty empty empty 20 12 0 14 #e0e0e0 #606060
 0;
 #X symbolatom 292 156 28 0 0 2 Category \$0-filter-category-label \$0-filter-category-out
 0;
@@ -1749,70 +1748,10 @@ categories...;
 #X coords 0 -1 1 1 450 80 2 100 100;
 #X restore 26 15 pd \$0-filter;
 #N canvas 288 337 450 300 \$0-plugin-list 0;
-#X scalar 1711-button 0 0 0 \;;
-#X scalar 1711-button 0 15 1 \;;
-#X scalar 1711-button 0 30 2 \;;
-#X scalar 1711-button 0 45 3 \;;
-#X scalar 1711-button 0 60 4 \;;
-#X scalar 1711-button 0 75 5 \;;
-#X scalar 1711-button 0 90 6 \;;
-#X scalar 1711-button 0 105 7 \;;
-#X scalar 1711-button 0 120 8 \;;
-#X scalar 1711-button 0 135 9 \;;
-#X scalar 1711-button 0 150 10 \;;
-#X scalar 1711-button 0 165 11 \;;
-#X scalar 1711-button 0 180 12 \;;
-#X scalar 1711-button 0 195 13 \;;
-#X scalar 1711-button 0 210 14 \;;
-#X scalar 1711-button 0 225 15 \;;
-#X scalar 1711-button 0 240 16 \;;
-#X scalar 1711-button 0 255 17 \;;
-#X scalar 1711-button 0 270 18 \;;
-#X scalar 1711-button 0 285 19 \;;
-#X obj 1 1 cnv 1 433 13 empty 1711-label-0 ARIA_Player (Garritan) [bridged]
-10 8 0 12 #a0a0a0 #000000 0;
-#X obj 1 16 cnv 1 433 13 empty 1711-label-1 ARIA_Player_(Multi) (Garritan) [bridged]
-10 8 0 12 #fcfcfc #000000 0;
-#X obj 1 31 cnv 1 433 13 empty 1711-label-2 Artistic_Delay_Mono (LSP\\\ VST)
-10 8 0 12 #fcfcfc #000000 0;
-#X obj 1 46 cnv 1 433 13 empty 1711-label-3 Artistic_Delay_Stereo (LSP\\\ VST)
-10 8 0 12 #fcfcfc #000000 0;
-#X obj 1 61 cnv 1 433 13 empty 1711-label-4 Carla-Patchbay (falkTX)
-10 8 0 12 #fcfcfc #000000 0;
-#X obj 1 76 cnv 1 433 13 empty 1711-label-5 Carla-Patchbay16 (falkTX)
-10 8 0 12 #fcfcfc #000000 0;
-#X obj 1 91 cnv 1 433 13 empty 1711-label-6 Carla-Patchbay32 (falkTX)
-10 8 0 12 #fcfcfc #000000 0;
-#X obj 1 106 cnv 1 433 13 empty 1711-label-7 Carla-Patchbay64 (falkTX)
-10 8 0 12 #fcfcfc #000000 0;
-#X obj 1 121 cnv 1 433 13 empty 1711-label-8 Carla-PatchbayFX (falkTX)
-10 8 0 12 #fcfcfc #000000 0;
-#X obj 1 136 cnv 1 433 13 empty 1711-label-9 Carla-Rack (falkTX)
-10 8 0 12 #fcfcfc #000000 0;
-#X obj 1 151 cnv 1 433 13 empty 1711-label-10 Carla-RackFX (falkTX)
-10 8 0 12 #fcfcfc #000000 0;
-#X obj 1 166 cnv 1 433 13 empty 1711-label-11 Compressor_LeftRight (LSP\\\ VST)
-10 8 0 12 #fcfcfc #000000 0;
-#X obj 1 181 cnv 1 433 13 empty 1711-label-12 Compressor_MidSide (LSP\\\ VST)
-10 8 0 12 #fcfcfc #000000 0;
-#X obj 1 196 cnv 1 433 13 empty 1711-label-13 Compressor_Mono (LSP\\\ VST)
-10 8 0 12 #fcfcfc #000000 0;
-#X obj 1 211 cnv 1 433 13 empty 1711-label-14 Compressor_Stereo (LSP\\\ VST)
-10 8 0 12 #fcfcfc #000000 0;
-#X obj 1 226 cnv 1 433 13 empty 1711-label-15 Convology_XT.vst3 (Impulse\\\ Record) [bridged]
-10 8 0 12 #fcfcfc #000000 0;
-#X obj 1 241 cnv 1 433 13 empty 1711-label-16 Crossover_LeftRight_x8 (LSP\\\ VST)
-10 8 0 12 #fcfcfc #000000 0;
-#X obj 1 256 cnv 1 433 13 empty 1711-label-17 Crossover_MidSide_x8 (LSP\\\ VST)
-10 8 0 12 #fcfcfc #000000 0;
-#X obj 1 271 cnv 1 433 13 empty 1711-label-18 Crossover_Mono_x8 (LSP\\\ VST)
-10 8 0 12 #fcfcfc #000000 0;
-#X obj 1 286 cnv 1 433 13 empty 1711-label-19 Crossover_Stereo_x8 (LSP\\\ VST)
-10 8 0 12 #fcfcfc #000000 0;
 #X coords 0 0 435 300 435 300 2 0 0;
 #X restore 41 95 pd \$0-plugin-list;
-#X obj 26 127 vsl 15 235 140 0 0 0 \$0-scroll \$0-scroll-bar empty
-0 -9 0 10 #fcfcfc #000000 #000000 0 0;
+#X obj 26 127 vsl 15 235 0 0 0 0 \$0-scroll \$0-scroll-bar empty 0
+-9 0 10 #fcfcfc #000000 #000000 0 0;
 #X obj 26 95 bng 15 250 50 0 \$0-scroll-page-up \$0-scroll-page-up
 « 4 7 0 14 #b8b8b8 #000000 #000000;
 #X obj 26 110 bng 15 250 50 0 \$0-scroll-up \$0-scroll-up ‹ 4 7 0
@@ -1877,8 +1816,8 @@ because normal plugins would simply crash Pd., f 52;
 #X obj 587 10 inlet~ gate;
 #X obj 150 403 s \$0-msg;
 #X obj 23 205 s \$0-msg;
-#X obj 0 122 bng 20 250 50 0 empty empty show\\\ control 22 10 0 10
-#404040 #dfdfdf #7c7c7c;
+#X obj 0 120 bng 20 250 50 0 empty empty show\\\ control 22 10 0 10
+#606060 #dfdfdf #7c7c7c;
 #X msg 23 180 vis 1;
 #N canvas 69 1181 703 633 midiprocess 0;
 #X obj 220 127 samphold~;
@@ -1897,7 +1836,6 @@ because normal plugins would simply crash Pd., f 52;
 #X obj 315 152 *~;
 #X obj 220 237 f;
 #X obj 315 280 t f b f;
-#X obj 332 85 expr~ $v1 < 0.5;
 #X obj 250 69 bang~;
 #X floatatom 208 354 5 0 0 0 - - - 0;
 #X obj 220 480 pack f f;
@@ -1922,57 +1860,54 @@ because normal plugins would simply crash Pd., f 52;
 #X obj 510 427 s \$1program-r;
 #X msg 510 402 label \$1\\\ ;
 #X obj 487 339 int;
+#X obj 332 85 expr~ $v1 > 0.5;
 #X connect 0 0 1 0;
 #X connect 1 0 10 0;
 #X connect 1 0 13 1;
 #X connect 2 0 3 0;
-#X connect 3 0 17 0;
-#X connect 3 0 18 1;
-#X connect 3 0 22 1;
+#X connect 3 0 16 0;
+#X connect 3 0 17 1;
+#X connect 3 0 21 1;
 #X connect 4 0 12 0;
 #X connect 5 0 8 0;
 #X connect 5 0 9 0;
-#X connect 6 0 19 0;
+#X connect 6 0 18 0;
 #X connect 6 0 11 0;
 #X connect 6 0 14 0;
 #X connect 7 0 6 0;
 #X connect 8 0 7 0;
 #X connect 12 0 5 0;
 #X connect 13 0 2 0;
-#X connect 14 0 24 0;
+#X connect 14 0 23 0;
 #X connect 14 1 13 0;
-#X connect 15 0 0 1;
-#X connect 15 0 12 1;
-#X connect 15 0 4 1;
-#X connect 16 0 34 0;
-#X connect 18 0 20 0;
+#X connect 15 0 33 0;
+#X connect 17 0 19 0;
+#X connect 18 0 21 0;
+#X connect 18 1 17 0;
+#X connect 18 1 28 0;
 #X connect 19 0 22 0;
-#X connect 19 1 18 0;
-#X connect 19 1 29 0;
-#X connect 20 0 23 0;
-#X connect 21 0 23 0;
-#X connect 22 0 21 0;
-#X connect 25 0 0 0;
-#X connect 26 0 4 0;
-#X connect 27 0 15 0;
-#X connect 30 0 35 0;
-#X connect 32 0 31 0;
+#X connect 20 0 22 0;
+#X connect 21 0 20 0;
+#X connect 24 0 0 0;
+#X connect 25 0 4 0;
+#X connect 26 0 38 0;
+#X connect 29 0 34 0;
+#X connect 31 0 30 0;
+#X connect 31 0 36 0;
 #X connect 32 0 37 0;
-#X connect 33 0 38 0;
-#X connect 34 0 5 0;
-#X connect 34 1 1 0;
-#X connect 34 2 33 0;
-#X connect 35 0 33 0;
-#X connect 37 0 36 0;
-#X connect 38 0 32 0;
+#X connect 33 0 5 0;
+#X connect 33 1 1 0;
+#X connect 33 2 32 0;
+#X connect 34 0 32 0;
+#X connect 36 0 35 0;
+#X connect 37 0 31 0;
+#X connect 38 0 0 1;
+#X connect 38 0 12 1;
+#X connect 38 0 4 1;
 #X restore 461 146 pd midiprocess;
-#X obj 0 21 cnv 15 48 20 empty empty 1pitch 2 9 0 12 #7c7c7c #dfdfdf
-0;
-#X obj 100 21 cnv 15 48 20 empty empty 2amp 2 9 0 12 #7c7c7c #dfdfdf
-0;
 #X obj 840 21 cnv 15 28 20 empty empty 4pg 4 9 0 12 #7c7c7c #dfdfdf
 0;
-#X obj 190 21 cnv 15 48 20 empty empty 3gate 2 9 0 12 #7c7c7c #dfdfdf
+#X obj 190 1 cnv 15 48 20 empty empty 3gate 2 9 0 12 #dfdfdf #9f9f9f
 0;
 #X obj 841 3 vsl 20 14 0 1 0 0 \$1program-s empty empty 0 -9 0 10 #fcfcfc
 #000000 #000000 0 1;
@@ -1981,6 +1916,18 @@ because normal plugins would simply crash Pd., f 52;
 #X obj 696 38 r \$1program-s;
 #X floatatom 784 82 5 0 0 0 - - - 0;
 #X obj 632 92 +~;
+#X obj 0 0 abs/attinlet \$1pitchin 1pitch 1 60 20;
+#X obj 90 0 abs/attinlet \$1ampin 2amp 1 60 20;
+#X obj 232 1 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
+#X obj 114 1 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
+#X obj 1 1 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060 0
+;
+#X obj 232 138 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
+#X obj 1 138 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
 #X connect 20 0 48 0;
 #X connect 21 0 22 0;
 #X connect 22 0 23 0;
@@ -1994,7 +1941,7 @@ because normal plugins would simply crash Pd., f 52;
 #X connect 47 0 52 2;
 #X connect 50 0 51 0;
 #X connect 51 0 49 0;
-#X connect 59 0 60 0;
-#X connect 59 0 61 1;
-#X connect 61 0 52 3;
-#X coords 0 -1 1 1 240 146 1 0 0;
+#X connect 57 0 58 0;
+#X connect 57 0 59 1;
+#X connect 59 0 52 3;
+#X coords 0 -1 1 1 240 140 1 0 0;

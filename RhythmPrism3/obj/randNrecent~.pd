@@ -30,7 +30,7 @@
 #X obj 590 374 pow~ 3;
 #X obj 590 399 *~ 4;
 #X obj 183 590 array get \$0-volts;
-#X obj 10 62 cnv 15 240 143 empty empty empty 20 12 0 14 #e0e0e0 #404040
+#X obj 10 62 cnv 15 240 143 empty empty empty 20 12 0 14 #e0e0e0 #606060
 0;
 #X obj 10 63 cnv 15 39 20 empty empty 1cv+ 4 9 0 12 #606060 #dfdfdf
 0;
@@ -63,41 +63,41 @@
 #X obj 17 413 abs~;
 #X obj 429 391 * 256;
 #X obj 429 414 min 256;
-#X obj 290 42 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 290 42 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 290 52 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 290 52 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 290 62 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 290 62 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 290 72 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 290 72 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 290 82 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 290 82 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 290 92 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 290 92 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 290 102 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 290 102 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 290 112 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 290 112 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 290 122 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 290 122 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 290 132 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 290 132 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 260 42 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 260 42 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 260 62 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 260 62 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 260 82 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 260 82 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 260 102 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 260 102 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 260 122 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 260 122 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 260 142 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 260 142 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 260 162 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 260 162 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 260 182 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 260 182 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #606060
 0;
 #X obj 10 83 ../lib/vslidermem \$1-cvx x;
 #X obj 30 83 ../lib/vslidermem \$1-cv+ +;

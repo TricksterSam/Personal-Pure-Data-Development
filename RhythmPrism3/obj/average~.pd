@@ -1,5 +1,5 @@
 #N canvas 1362 49 504 758 12;
-#X obj 10 43 cnv 15 100 20 empty empty average~ 2 9 0 12 #dfdfdf #606060
+#X obj 10 40 cnv 15 100 20 empty empty average~ 2 10 0 12 #dfdfdf #606060
 0;
 #X obj 230 510 outlet~;
 #X obj 180 8 inlet~ cv+-;
@@ -22,6 +22,16 @@
 #X obj 396 314 rzero_rev~ -16;
 #X obj 374 284 expr~ $v1==0;
 #X obj 374 350 expr~ $v1==$v2;
+#X obj 10 40 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
+#X obj 10 58 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
+#X obj 40 40 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
+#X obj 72 40 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
+#X obj 102 40 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
 #X connect 2 0 7 0;
 #X connect 2 0 12 0;
 #X connect 3 0 12 1;
@@ -49,4 +59,4 @@
 #X connect 20 0 19 0;
 #X connect 20 0 21 0;
 #X connect 21 0 11 1;
-#X coords 0 -1 1 1 100 26 2 10 40;
+#X coords 0 -1 1 1 100 20 2 10 40;

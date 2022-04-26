@@ -1,46 +1,40 @@
-#N canvas 744 95 999 759 12;
-#X obj 10 42 cnv 15 240 121 empty empty playdirectory~\\\ DIRECTORY\\\ SAMPLER
-2 9 0 12 #dfdfdf #606060 0;
-#X obj 300 42 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+#N canvas 853 24 999 759 12;
+#X obj 10 40 cnv 15 220 121 empty empty playdirectory~\\\ DIRECTORYSAMPLER
+2 30 0 12 #dfdfdf #606060 0;
+#X obj 300 42 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 300 52 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 300 52 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 300 62 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 300 62 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 300 72 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 300 72 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 300 82 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 300 82 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 300 92 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 300 92 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 300 102 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 300 102 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 300 112 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 300 112 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 300 122 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 300 122 cnv 10 10 10 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 300 132 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 300 132 cnv 10 10 10 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 111 61 cnv 15 38 20 empty empty 2cv+ 4 9 0 12 #7c7c7c #dfdfdf
+#X obj 11 141 cnv 15 38 20 empty empty 1sg+- 2 9 0 12 #dfdfdf #9f9f9f
 0;
-#X obj 11 61 cnv 15 38 20 empty empty 1trꞱ 4 9 0 12 #7c7c7c #dfdfdf
-0;
-#X obj 211 61 cnv 15 38 20 empty empty 3cv+ 4 9 0 12 #7c7c7c #dfdfdf
-0;
-#X obj 11 144 cnv 15 38 20 empty empty 1sg+- 4 9 0 12 #7c7c7c #dfdfdf
-0;
-#X obj 10 82 abs/hslidermem \$1hslider thresh 0.5 100 20;
+#X obj 10 80 abs/hslidermem \$1hslider thresh 0.5 100 20;
 #X text 105 692 abs/hslidermem \$1name label default x y;
-#X obj 150 103 abs/hslidermem \$1volume volume 0.5 100 20;
-#X obj 31 104 cnv 15 38 19 empty empty UP 4 9 0 12 #dfdfdf #7c7c7c
+#X obj 130 101 abs/hslidermem \$1volume volume 0.5 100 20;
+#X obj 31 102 cnv 15 38 19 empty empty UP 4 9 0 12 #dfdfdf #9f9f9f
 0;
-#X obj 71 104 cnv 15 38 19 empty empty DOWN 4 9 0 12 #dfdfdf #7c7c7c
+#X obj 71 102 cnv 15 38 19 empty empty DOWN 4 9 0 12 #dfdfdf #9f9f9f
 0;
-#X obj 10 103 tgl 20 0 \$1tu-s \$1tu-r empty 17 7 0 10 #404040 #dfdfdf
-#000000 0 1;
-#X obj 51 103 tgl 20 0 \$1td-s \$1td-r empty 17 7 0 10 #404040 #dfdfdf
-#000000 0 1;
-#N canvas 0 0 450 300 threshold_save 1;
+#X obj 10 101 tgl 20 0 \$1tu-s \$1tu-r empty 17 7 0 10 #606060 #dfdfdf
+#9f9f9f 0 1;
+#X obj 51 101 tgl 20 0 \$1td-s \$1td-r empty 17 7 0 10 #606060 #dfdfdf
+#9f9f9f 0 1;
+#N canvas 0 0 450 300 threshold_save 0;
 #X obj 24 40 abs/allmem \$1threshup;
 #X obj 113 99 abs/allmem \$1threshdown;
 #X msg 24 65 set \$1;
@@ -63,10 +57,10 @@
 #X obj 616 12 inlet~ pitchcv;
 #X obj 756 12 inlet~ volumecv;
 #X obj 9 368 clone abs/samplevoice~ 60 \$1;
-#X obj 10 124 bng 20 250 50 0 \$1dirsel-s \$1dirsel-r sel 2 10 0 10
-#404040 #dfdfdf #9f9f9f;
-#X obj 31 125 cnv 15 38 19 empty \$1directory-r trombloon 4 9 0 12
-#dfdfdf #7c7c7c 0;
+#X obj 10 122 bng 20 250 50 0 \$1dirsel-s \$1dirsel-r sel 2 10 0 10
+#606060 #dfdfdf #9f9f9f;
+#X obj 31 123 cnv 15 38 19 empty \$1directory-r acousticguitar 4 9
+0 12 #dfdfdf #9f9f9f 0;
 #N canvas 593 1853 662 172 tables 0;
 #X obj 56 17 table \$1-dirtemp;
 #X obj 56 44 table \$1-dirsamples;
@@ -90,10 +84,10 @@
 #X obj 87 55 cnv 15 217 52 empty \$1-dirautoname talkbox 5 12 2 10
 #0400fc #fcfcfc 0;
 #X restore 9 337 pd \$1-dirsampautoload;
-#N canvas 752 459 996 580 saveloaddirectory 0;
+#N canvas 182 381 996 580 saveloaddirectory 0;
 #X obj 460 163 del 300;
 #X obj 460 218 print loaddir;
-#X obj 144 86 abs/textmem \$1directoryname;
+#X obj 466 70 abs/textmem \$1directoryname;
 #X obj 124 10 r \$1dirsel-s;
 #X obj 124 35 openpanel 1;
 #X obj 124 165 s \$1directory-r;
@@ -114,20 +108,17 @@
 #X obj 460 193 symbol;
 #X obj 124 58 t a a b a;
 #X obj 460 133 t b;
-#X obj 106 250 print;
 #X msg 168 212 symbol \$1/*.wav \, symbol \$1/*.aif;
+#X obj 291 32 abs/parammem \$1directoryname;
+#X msg 398 54 bang;
 #X connect 0 0 20 0;
-#X connect 2 0 10 0;
-#X connect 2 0 6 0;
-#X connect 2 1 8 0;
-#X connect 2 1 22 0;
 #X connect 3 0 4 0;
 #X connect 4 0 21 0;
 #X connect 6 0 7 0;
 #X connect 7 0 5 0;
 #X connect 8 0 5 0;
 #X connect 9 0 16 0;
-#X connect 10 0 24 0;
+#X connect 10 0 23 0;
 #X connect 12 0 17 0;
 #X connect 12 1 13 0;
 #X connect 13 0 14 0;
@@ -140,12 +131,17 @@
 #X connect 19 0 13 1;
 #X connect 20 0 1 0;
 #X connect 21 0 6 0;
-#X connect 21 1 2 0;
+#X connect 21 1 24 0;
 #X connect 21 2 19 0;
 #X connect 21 3 20 1;
 #X connect 22 0 0 0;
-#X connect 24 0 9 0;
-#X connect 24 0 23 0;
+#X connect 23 0 9 0;
+#X connect 24 0 6 0;
+#X connect 24 0 10 0;
+#X connect 24 1 25 0;
+#X connect 24 2 8 0;
+#X connect 24 2 22 0;
+#X connect 25 0 24 1;
 #X restore 9 433 pd saveloaddirectory;
 #N canvas 83 45 1015 868 loadFilesToArrays 0;
 #N canvas 911 661 707 300 DirFileListCount 0;
@@ -208,24 +204,24 @@
 #X connect 24 0 21 0;
 #X restore 35 112 pd list-dripper;
 #X obj 162 28 inlet trignext;
-#X obj 14 185 print filenames;
 #X obj 163 186 s \$1-filecount;
 #X obj 279 53 t a b;
+#X obj 14 185 print loading\ file:;
 #X connect 0 0 2 1;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 2 1;
 #X connect 3 0 4 0;
-#X connect 3 0 13 0;
-#X connect 6 0 14 0;
+#X connect 3 0 12 0;
+#X connect 6 0 13 0;
 #X connect 7 0 10 0;
 #X connect 10 0 8 0;
-#X connect 10 0 12 0;
 #X connect 10 0 1 0;
+#X connect 10 0 14 0;
 #X connect 10 1 9 0;
 #X connect 11 0 10 0;
-#X connect 14 0 10 1;
-#X connect 14 1 0 0;
+#X connect 13 0 10 1;
+#X connect 13 1 0 0;
 #X restore 113 93 pd DirFileListCount;
 #X obj 259 13 inlet dirList;
 #X obj 123 233 soundfiler;
@@ -778,9 +774,6 @@ resize 0 \; \$1-dirsamples3 resize 0 \; \$1-dirsamples4 resize 0 \;
 #X msg 224 374 label MIN;
 #X msg 264 408 label \$1%;
 #X msg 351 367 label MAX;
-#X msg 167 518 color #dfdfdf #7c7c7c #7c7c7c;
-#X msg 195 489 color #7c7c7c #dfdfdf #dfdfdf;
-#X obj 195 546 s \$1trigger_blink;
 #X obj 129 347 change;
 #X obj 129 321 env~;
 #X obj 129 374 select 0 100;
@@ -792,19 +785,22 @@ resize 0 \; \$1-dirsamples3 resize 0 \; \$1-dirsamples4 resize 0 \;
 #X obj 83 431 change;
 #X obj 83 486 outlet;
 #X obj 83 456 sel 1;
-#X obj 391 51 r \$1trigger_env;
 #X obj 391 76 t b b;
-#X obj 391 122 del 10;
-#X connect 0 0 18 0;
-#X connect 0 0 22 0;
-#X connect 0 0 24 0;
+#X obj 391 51 r \$1manualtrigger-s;
+#X obj 195 546 s \$1manualtrigger-r;
+#X msg 167 518 color #9f9f9f #dfdfdf #dfdfdf;
+#X msg 195 489 color #dfdfdf #9f9f9f #9f9f9f;
+#X obj 391 122 del 50;
+#X connect 0 0 15 0;
+#X connect 0 0 19 0;
+#X connect 0 0 21 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 0 1;
 #X connect 3 0 5 0;
 #X connect 5 0 7 0;
 #X connect 6 0 5 0;
-#X connect 6 0 24 0;
+#X connect 6 0 21 0;
 #X connect 7 0 9 0;
 #X connect 8 0 12 0;
 #X connect 8 1 13 0;
@@ -815,28 +811,24 @@ resize 0 \; \$1-dirsamples3 resize 0 \; \$1-dirsamples4 resize 0 \;
 #X connect 12 0 4 0;
 #X connect 13 0 4 0;
 #X connect 14 0 16 0;
-#X connect 15 0 16 0;
-#X connect 17 0 19 0;
-#X connect 18 0 17 0;
-#X connect 19 0 14 0;
-#X connect 19 1 15 0;
-#X connect 20 0 0 0;
-#X connect 21 0 1 0;
-#X connect 21 0 23 0;
-#X connect 24 0 25 0;
-#X connect 25 0 27 0;
-#X connect 27 0 26 0;
-#X connect 28 0 29 0;
-#X connect 29 0 30 0;
-#X connect 29 1 15 0;
-#X connect 29 1 26 0;
-#X connect 30 0 14 0;
+#X connect 15 0 14 0;
+#X connect 16 0 28 0;
+#X connect 16 1 29 0;
+#X connect 17 0 0 0;
+#X connect 18 0 1 0;
+#X connect 18 0 20 0;
+#X connect 21 0 22 0;
+#X connect 22 0 24 0;
+#X connect 24 0 23 0;
+#X connect 25 0 30 0;
+#X connect 25 1 29 0;
+#X connect 25 1 23 0;
+#X connect 26 0 25 0;
+#X connect 28 0 27 0;
+#X connect 29 0 27 0;
+#X connect 30 0 28 0;
 #X restore 355 161 pd trigger;
-#X obj 111 105 vsl 39 15 0 127 0 0 \$1trigger_env empty empty 0 -9
-0 10 #fcfcfc #000000 #000000 0 0;
-#X obj 111 103 cnv 15 40 20 empty \$1trigger_blink gate 2 9 0 12 #dfdfdf
-#7c7c7c 0;
-#X obj 50 61 cnv 15 20 20 empty \$1thr-r 58% 2 9 0 12 #dfdfdf #7c7c7c
+#X obj 50 40 cnv 15 20 20 empty \$1thr-r 50% 2 9 0 12 #dfdfdf #7c7c7c
 0;
 #N canvas 314 1647 515 300 notemaker 0;
 #X obj 76 226 s \$1-dirsamp-voicetrigger;
@@ -942,10 +934,10 @@ array.;
 #X connect 10 0 3 1;
 #X connect 10 0 9 1;
 #X restore 9 490 pd newFileRequests;
-#X obj 151 125 cnv 15 38 19 empty empty RANDOMIZE 4 9 0 12 #dfdfdf
-#7c7c7c 0;
-#X obj 229 124 tgl 20 0 \$1-randomizedirectoryorder \$1-randomizedirectoryorder-r
-empty 17 7 0 10 #404040 #dfdfdf #000000 0 1;
+#X obj 162 123 cnv 15 38 19 empty empty RANDOM 4 9 0 12 #dfdfdf #9f9f9f
+0;
+#X obj 210 122 tgl 20 0 \$1-randomizedirectoryorder \$1-randomizedirectoryorder-r
+empty 17 7 0 10 #606060 #dfdfdf #000000 0 1;
 #X obj 9 546 clip~ -1 1;
 #X obj 9 571 hip~ 15;
 #X obj 446 520 r \$1-voicedone;
@@ -954,63 +946,109 @@ empty 17 7 0 10 #404040 #dfdfdf #000000 0 1;
 #X msg 446 570 1 \, 0 10;
 #X obj 446 620 expr~ $v1 > 0.5;
 #X obj 446 645 outlet~ EndOfSampleGate;
-#X obj 211 145 cnv 15 38 19 empty empty 2trꞱ 4 9 0 12 #7c7c7c #dfdfdf
-0;
-#X obj 170 145 cnv 15 40 19 empty \$1triggerEOS EOS 4 9 0 12 #dfdfdf
-#7c7c7c 0;
+#X obj 201 142 cnv 15 28 19 empty \$1triggerEOS 2trꞱ 2 9 0 12 #dfdfdf
+#9f9f9f 0;
+#X obj 102 142 cnv 15 40 19 empty empty end\\\ of\\\ sample 2 9 0 12
+#dfdfdf #9f9f9f 0;
 #X obj 438 295 r \$1-manualtrig;
 #X obj 443 325 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 251 40 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 261 39 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 251 61 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 261 20 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 251 82 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 261 81 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 251 103 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 261 102 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 251 124 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 261 123 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 251 145 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 261 144 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 251 166 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #404040
+#X obj 261 165 cnv 20 20 20 empty empty empty 20 12 0 14 #ff8300 #606060
 0;
-#X obj 251 187 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #404040
+#X obj 261 186 cnv 20 20 20 empty empty empty 20 12 0 14 #0400ff #606060
 0;
-#X obj 111 82 abs/hslidermem \$1pitchoffset pitch 0 100 20;
+#X obj 130 80 abs/hslidermem \$1pitchoffset pitch 0 100 20;
 #X obj 234 462 abs/allmem \$1-randomdirorder;
-#X connect 15 0 37 1;
-#X connect 17 0 48 0;
-#X connect 23 0 37 0;
-#X connect 24 0 42 0;
-#X connect 25 0 47 0;
-#X connect 32 0 33 0;
-#X connect 34 0 81 0;
-#X connect 36 0 35 0;
-#X connect 36 0 81 0;
-#X connect 37 1 46 0;
+#X obj 10 40 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
+#X obj 10 159 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
+#X obj 221 159 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
+#X obj 631 641 s \$1triggerEOS;
+#X obj 631 519 t b b;
+#X obj 631 544 del 50;
+#X msg 670 578 color #9f9f9f #dfdfdf #dfdfdf;
+#X msg 631 611 color #dfdfdf #9f9f9f #9f9f9f;
+#X obj 631 496 abs/persec 30;
+#X obj 10 42 vsl 38 15 0 127 0 0 \$1manualtrigger-s empty empty 0 -9
+0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 10 40 cnv 15 38 20 empty \$1manualtrigger-r 1trꞱ 4 9 0 12
+#9f9f9f #dfdfdf 0;
+#X obj 10 40 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
+#X msg 635 78 \$1 4;
+#X obj 635 103 line~;
+#X obj 616 127 *~;
+#X msg 775 78 \$1 4;
+#X obj 775 103 line~;
+#X obj 756 127 *~;
+#X obj 170 40 abs/attinlet \$1volumein 3volume 1 60 20;
+#X obj 105 40 abs/attinlet \$1pitchin 2pitch 1 60 20;
+#X obj 222 40 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
+#X obj 116 40 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
+#X connect 12 0 34 1;
+#X connect 14 0 43 0;
+#X connect 20 0 34 0;
+#X connect 21 0 91 0;
+#X connect 22 0 94 0;
+#X connect 29 0 30 0;
+#X connect 31 0 76 0;
+#X connect 33 0 32 0;
+#X connect 33 0 76 0;
+#X connect 34 1 41 0;
+#X connect 37 0 40 0;
+#X connect 38 0 39 0;
+#X connect 39 0 37 1;
+#X connect 40 0 46 0;
+#X connect 41 0 36 0;
+#X connect 41 1 45 0;
+#X connect 41 2 40 0;
 #X connect 42 0 45 0;
 #X connect 43 0 44 0;
 #X connect 44 0 42 1;
-#X connect 45 0 51 0;
-#X connect 46 0 41 0;
-#X connect 46 1 50 0;
-#X connect 46 2 45 0;
-#X connect 47 0 50 0;
+#X connect 45 0 48 0;
+#X connect 46 0 47 0;
 #X connect 48 0 49 0;
-#X connect 49 0 47 1;
-#X connect 50 0 53 0;
-#X connect 51 0 52 0;
-#X connect 53 0 54 0;
-#X connect 55 0 60 0;
-#X connect 60 0 61 0;
-#X connect 61 0 56 0;
-#X connect 62 0 63 0;
-#X connect 63 0 65 0;
-#X connect 64 0 66 0;
-#X connect 65 0 64 0;
-#X connect 66 0 67 0;
-#X connect 70 0 71 0;
-#X connect 80 0 43 0;
-#X connect 81 0 35 0;
-#X coords 0 -1 1 1 240 126 1 10 40;
+#X connect 50 0 55 0;
+#X connect 55 0 56 0;
+#X connect 56 0 51 0;
+#X connect 57 0 58 0;
+#X connect 58 0 60 0;
+#X connect 58 0 85 0;
+#X connect 59 0 61 0;
+#X connect 60 0 59 0;
+#X connect 61 0 62 0;
+#X connect 65 0 66 0;
+#X connect 75 0 38 0;
+#X connect 76 0 32 0;
+#X connect 76 2 33 0;
+#X connect 81 0 82 0;
+#X connect 81 1 83 0;
+#X connect 82 0 84 0;
+#X connect 83 0 80 0;
+#X connect 84 0 80 0;
+#X connect 85 0 81 0;
+#X connect 89 0 90 0;
+#X connect 90 0 91 1;
+#X connect 91 0 37 0;
+#X connect 92 0 93 0;
+#X connect 93 0 94 1;
+#X connect 94 0 42 0;
+#X connect 95 0 92 0;
+#X connect 96 0 89 0;
+#X coords 0 -1 1 1 220 121 1 10 40;
