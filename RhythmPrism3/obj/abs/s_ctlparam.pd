@@ -1,4 +1,4 @@
-#N canvas 937 380 867 532 12;
+#N canvas 947 445 867 532 12;
 #X obj 546 163 file glob;
 #X obj 546 113 pdcontrol;
 #X msg 546 87 dir;
@@ -46,10 +46,10 @@
 #X obj 280 188 t b f f;
 #X obj 280 159 r savectlscheme;
 #X msg 502 396 read -c \$1;
-#X obj 356 55 f;
+#X obj 356 75 f;
 #X obj 303 231 pack f f;
-#X obj 164 12 r loadctlscheme;
-#X obj 164 63 unpack f f;
+#X obj 78 24 r loadctlscheme;
+#X obj 78 75 unpack f f;
 #X msg 306 98 set \$1;
 #X obj 304 11 inlet set;
 #X obj 374 11 inlet currentvalue;
@@ -64,7 +64,7 @@ Use the set inlet to assign the current value to the GUI element.;
 #X obj 502 289 pack s s;
 #X obj 518 39 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
-#X obj 164 38 text get ../../saves/\$1;
+#X obj 78 50 text get ../../saves/\$1;
 #X obj 303 255 text set ../../saves/\$1;
 #X msg 280 316 write -c ../../saves/\$1;
 #X obj 280 341 text define ../../saves/\$1;

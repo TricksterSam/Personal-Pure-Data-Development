@@ -81,7 +81,7 @@
 0;
 #X obj 13 120 hsl 74 20 0 127 0 0 \$1choosedirectory-s empty empty
 -2 -8 0 10 #fcfcfc #000000 #000000 0 0;
-#X obj 10 120 cnv 15 79 20 empty empty DIRECTORY 3 10 0 14 #606060
+#X obj 10 120 cnv 15 79 20 empty empty FILE\ NAME 3 10 0 14 #606060
 #9f9f9f 0;
 #X obj 894 334 r \$1choosedirectory-s;
 #X obj 894 497 file mkdir;

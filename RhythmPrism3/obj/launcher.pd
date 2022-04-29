@@ -1,19 +1,19 @@
-#N canvas 330 70 1163 716 12;
-#X obj 10 40 cnv 15 240 398 empty empty launcher\ OBJECT\ CREATOR 2
-30 0 12 #dfdfdf #606060 0;
-#X obj 130 216 bng 19 250 50 0 make_relabi empty relabi~ 22 10 0 10
+#N canvas 209 57 1163 716 12;
+#X obj 10 40 cnv 15 240 438 empty empty launcher\\\ OBJECT\\\ CREATOR
+2 30 0 12 #dfdfdf #606060 0;
+#X obj 130 266 bng 19 250 50 0 make_relabi empty relabi~ 22 10 0 10
 #606060 #dfdfdf #7c7c7c;
-#X obj 20 153 bng 19 250 50 0 make_atten empty atten~ 22 10 0 10 #606060
+#X obj 20 203 bng 19 250 50 0 make_atten empty atten~ 22 10 0 10 #606060
 #dfdfdf #7c7c7c;
-#X obj 130 300 bng 19 250 50 0 make_shiftreg empty shiftreg~ 22 10
+#X obj 130 350 bng 19 250 50 0 make_shiftreg empty shiftreg~ 22 10
 0 10 #606060 #dfdfdf #7c7c7c;
-#X obj 130 258 bng 19 250 50 0 make_seqrand empty seqrand~ 22 10 0
+#X obj 130 308 bng 19 250 50 0 make_seqrand empty seqrand~ 22 10 0
 10 #606060 #dfdfdf #7c7c7c;
-#X obj 20 363 bng 19 250 50 0 make_multisampler empty multisampler~
+#X obj 20 413 bng 19 250 50 0 make_multisampler empty multisampler~
 22 10 0 10 #606060 #dfdfdf #7c7c7c;
-#X obj 20 384 bng 19 250 50 0 make_offset empty offset~ 22 10 0 10
+#X obj 20 434 bng 19 250 50 0 make_offset empty offset~ 22 10 0 10
 #606060 #dfdfdf #7c7c7c;
-#X obj 130 342 bng 19 250 50 0 make_triggate empty triggate~ 22 10
+#X obj 130 392 bng 19 250 50 0 make_triggate empty triggate~ 22 10
 0 10 #606060 #dfdfdf #7c7c7c;
 #X obj 11 78 hradio 20 1 0 8 loadindex empty empty 160 10 0 10 #606060
 #dfdfdf #7c7c7c 0;
@@ -27,7 +27,7 @@
 #X msg 369 136 \$1num;
 #X msg 486 146 \; pd-_parent.pd obj 40 40 obj/\$1 \$2 \, loadbang \,
 editmode 1;
-#X obj 20 258 bng 19 250 50 0 make_envel empty envel~ 22 10 0 10 #606060
+#X obj 20 308 bng 19 250 50 0 make_envel empty envel~ 22 10 0 10 #606060
 #dfdfdf #7c7c7c;
 #X obj 175 98 hsl 54 20 0 127 0 0 save-confirm empty empty -2 -8 0
 10 #fcfcfc #000000 #000000 0 0;
@@ -47,34 +47,34 @@ editmode 1;
 #X msg 335 563 set \$1;
 #X obj 350 589 s loadindex;
 #X obj 335 458 change;
-#X obj 99 40 cnv 15 38 19 empty empty numb\ of\ objects 4 9 0 12 #dfdfdf
-#9f9f9f 0;
+#X obj 99 40 cnv 15 38 19 empty empty numb\\\ of\\\ objects 4 9 0 12
+#dfdfdf #9f9f9f 0;
 #X floatatom 212 40 5 0 0 0 - - - 0;
 #X msg 423 136 set \$1;
-#X obj 20 405 bng 19 250 50 0 make_pattern empty pattern~ 22 10 0 10
+#X obj 20 455 bng 19 250 50 0 make_pattern empty pattern~ 22 10 0 10
 #606060 #dfdfdf #7c7c7c;
-#X obj 20 237 bng 19 250 50 0 make_directory empty directory~ 22 10
+#X obj 20 287 bng 19 250 50 0 make_directory empty directory~ 22 10
 0 10 #606060 #dfdfdf #7c7c7c;
-#X obj 130 363 bng 19 250 50 0 make_vco empty vco~ 22 10 0 10 #606060
+#X obj 130 413 bng 19 250 50 0 make_vco empty vco~ 22 10 0 10 #606060
 #dfdfdf #7c7c7c;
-#X obj 130 321 bng 19 250 50 0 make_temperament empty temperament~
+#X obj 130 371 bng 19 250 50 0 make_temperament empty temperament~
 22 10 0 10 #606060 #dfdfdf #7c7c7c;
 #X msg 519 88 bang;
 #X obj 423 89 t b a a a;
-#X obj 20 174 bng 19 250 50 0 make_average empty average~ 22 10 0 10
+#X obj 20 224 bng 19 250 50 0 make_average empty average~ 22 10 0 10
 #606060 #dfdfdf #7c7c7c;
-#X obj 130 195 bng 19 250 50 0 make_range empty range~ 22 10 0 10 #606060
+#X obj 130 245 bng 19 250 50 0 make_range empty range~ 22 10 0 10 #606060
 #dfdfdf #7c7c7c;
 #X obj 423 115 abs/parammem launchedobjs;
 #X msg 346 190 \; pd-_parent.pd obj 40 40 obj/\$1 \$2 \, editmode 1
 \; createbang bang \;;
-#X obj 20 279 bng 19 250 50 0 make_filter empty filter~ 22 10 0 10
+#X obj 20 329 bng 19 250 50 0 make_filter empty filter~ 22 10 0 10
 #606060 #dfdfdf #7c7c7c;
-#X obj 20 300 bng 19 250 50 0 make_function empty function~ 22 10 0
+#X obj 20 350 bng 19 250 50 0 make_function empty function~ 22 10 0
 10 #606060 #dfdfdf #7c7c7c;
-#X obj 20 216 bng 19 250 50 0 make_clockops empty clockops~ 22 10 0
+#X obj 20 266 bng 19 250 50 0 make_clockops empty clockops~ 22 10 0
 10 #606060 #dfdfdf #7c7c7c;
-#X obj 20 321 bng 19 250 50 0 make_midigen empty midigen~ 22 10 0 10
+#X obj 20 371 bng 19 250 50 0 make_midigen empty midigen~ 22 10 0 10
 #606060 #dfdfdf #7c7c7c;
 #X obj 431 405 s loadNtrpl8;
 #X obj 457 453 s \$0-transtime-r;
@@ -90,16 +90,16 @@ editmode 1;
 #X obj 485 476 f;
 #X obj 522 380 r loadindex;
 #X msg 522 405 bang;
-#X obj 130 279 bng 19 250 50 0 make_sequence empty sequence~ 22 10
+#X obj 130 329 bng 19 250 50 0 make_sequence empty sequence~ 22 10
 0 10 #606060 #dfdfdf #7c7c7c;
-#X obj 130 237 bng 19 250 50 0 make_scope empty scope~ 22 10 0 10 #606060
+#X obj 130 287 bng 19 250 50 0 make_scope empty scope~ 22 10 0 10 #606060
 #dfdfdf #7c7c7c;
 #X obj 14 119 hsl 155 20 0 1 0 0 empty empty trans 1 10 0 18 #606060
 #dfdfdf #7c7c7c 0 1;
 #X obj 346 269 abs/parammem \$1transition 0;
 #X msg 532 292 bang;
 #X msg 346 294 set \$1;
-#X obj 20 342 bng 19 250 50 0 make_mixout empty mixout~ 22 10 0 10
+#X obj 20 392 bng 19 250 50 0 make_mixout empty mixout~ 22 10 0 10
 #606060 #dfdfdf #7c7c7c;
 #N canvas 0 0 571 526 labelcolors 0;
 #X obj 57 44 r saveindex-s;
@@ -143,7 +143,7 @@ editmode 1;
 #X connect 17 0 3 0;
 #X connect 17 1 16 0;
 #X restore 316 638 pd labelcolors;
-#X obj 20 195 bng 19 250 50 0 make_cco empty cco~ 22 10 0 10 #606060
+#X obj 20 245 bng 19 250 50 0 make_cco empty cco~ 22 10 0 10 #606060
 #dfdfdf #7c7c7c;
 #N canvas 947 300 961 669 make_objects 0;
 #X obj 270 194 r make_offset;
@@ -250,15 +250,26 @@ editmode 1;
 #X restore 346 13 pd make_objects;
 #X obj 81 119 cnv 15 20 20 empty \$0-transtime-r 0ms 2 10 0 14 #606060
 #7c7c7c 0;
-#X obj 130 174 bng 19 250 50 0 make_pulse empty pulse~ 22 10 0 10 #606060
+#X obj 130 224 bng 19 250 50 0 make_pulse empty pulse~ 22 10 0 10 #606060
 #dfdfdf #7c7c7c;
-#X obj 130 384 bng 19 250 50 0 make_vwbp empty vwbp~ 22 10 0 10 #606060
+#X obj 130 434 bng 19 250 50 0 make_vwbp empty vwbp~ 22 10 0 10 #606060
 #dfdfdf #7c7c7c;
-#X obj 130 153 bng 19 250 50 0 make_plugin empty plugin~ 22 10 0 10
+#X obj 130 203 bng 19 250 50 0 make_plugin empty plugin~ 22 10 0 10
 #606060 #dfdfdf #7c7c7c;
 #X obj 10 40 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
 0;
 #X obj 335 488 * 7;
+#X obj 11 148 hradio 20 1 0 8 loadctlscheme empty empty 160 10 0 10
+#606060 #dfdfdf #7c7c7c 0;
+#X obj 172 148 cnv 15 59 20 empty empty control\\\ bank 2 10 0 10 #dfdfdf
+#7c7c7c 0;
+#X obj 11 168 hradio 20 1 0 8 savectlscheme empty empty 165 10 0 10
+#606060 #9f9f9f #7c7c7c 0;
+#X obj 172 168 cnv 15 59 20 empty empty save\\\ bank 2 10 0 10 #dfdfdf
+#7c7c7c 0;
+#X obj 260 86 abs/createbang;
+#X msg 260 151 0;
+#X obj 260 111 del 250;
 #X connect 10 0 11 0;
 #X connect 11 0 12 0;
 #X connect 11 0 15 0;
@@ -303,4 +314,8 @@ editmode 1;
 #X connect 66 0 63 0;
 #X connect 70 0 13 0;
 #X connect 76 0 26 0;
-#X coords 0 -1 1 1 240 400 1 10 40;
+#X connect 81 0 83 0;
+#X connect 82 0 77 0;
+#X connect 82 0 8 0;
+#X connect 83 0 82 0;
+#X coords 0 -1 1 1 240 440 1 10 40;
