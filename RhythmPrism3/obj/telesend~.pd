@@ -1,0 +1,24 @@
+#N canvas 1362 49 504 758 12;
+#X obj 10 40 cnv 15 100 20 empty \$1number-label telesend~\ 2760 2
+10 0 12 #dfdfdf #606060 0;
+#X obj 180 8 inlet~ cv+-;
+#X obj 10 40 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
+#X obj 10 78 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+0;
+#X obj 180 52 delwrite~ \$1-send 1;
+#X obj 115 130 sig~ \$0;
+#X obj 115 155 send~ \$1-number;
+#X obj 126 293 s \$1number-label;
+#X msg 126 269 label telesend~\\\ \$1;
+#X obj 163 184 bang~;
+#X obj 163 209 snapshot~;
+#X obj 163 234 change;
+#X connect 1 0 4 0;
+#X connect 5 0 6 0;
+#X connect 5 0 10 0;
+#X connect 8 0 7 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 11 0 8 0;
+#X coords 0 -1 1 1 100 20 2 10 40;

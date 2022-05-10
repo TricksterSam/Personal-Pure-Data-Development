@@ -533,21 +533,21 @@
 -9 0 10 #fcfcfc #000000 #000000 0 0;
 #X obj 179 123 vsl 60 14 0 127 0 0 \$1ratedisplay4-s empty empty 0
 -9 0 10 #fcfcfc #000000 #000000 0 0;
-#X obj 60 120 cnv 15 60 20 empty \$1-ch2hz-r 67.5bpm 2 9 0 12 #9f9f9f
+#X obj 60 120 cnv 15 60 20 empty \$1-ch2hz-r 68.1bpm 2 9 0 12 #9f9f9f
 #dfdfdf 0;
-#X obj 120 120 cnv 15 60 20 empty \$1-ch3hz-r 2.8bpm 2 9 0 12 #9f9f9f
+#X obj 120 120 cnv 15 60 20 empty \$1-ch3hz-r 208.1bpm 2 9 0 12 #9f9f9f
 #dfdfdf 0;
-#X obj 179 120 cnv 15 60 20 empty \$1-ch4hz-r 7.9bpm 2 9 0 12 #9f9f9f
+#X obj 179 120 cnv 15 60 20 empty \$1-ch4hz-r 40.6bpm 2 9 0 12 #9f9f9f
 #dfdfdf 0;
 #X obj 0 123 vsl 60 14 0 127 0 0 \$1ratedisplay1-s empty empty 0 -9
 0 10 #dfdfdf #9f9f9f #000000 0 0;
-#X obj 0 120 cnv 15 60 20 empty \$1-ch1hz-r 0.208Hz 2 9 0 12 #9f9f9f
+#X obj 0 120 cnv 15 60 20 empty \$1-ch1hz-r 268bpm 2 9 0 12 #9f9f9f
 #dfdfdf 0;
 #X obj 1 159 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
 0;
 #X obj 231 0 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
 0;
-#X obj 37 159 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+#X obj 32 159 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
 0;
 #X obj 190 141 cnv 15 28 20 empty empty sn+ 2 9 0 12 #dfdfdf #9f9f9f
 0;
@@ -573,7 +573,7 @@
 0;
 #X obj 100 159 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
 0;
-#X obj 68 159 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
+#X obj 66 159 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060
 0;
 #X obj 0 0 abs/attinlet \$1fmin 1fm+ 1 60 20;
 #X obj 1 0 cnv 2 8 2 empty empty empty 20 12 0 14 #606060 #606060 0

@@ -1,4 +1,4 @@
-#N canvas 292 190 1510 800 12;
+#N canvas 171 160 1510 800 12;
 #N canvas 1018 168 883 779 xsettings 0;
 #X obj 63 11 r \$1xset-s;
 #X obj 569 45 r \$1xmidiclear-s;
@@ -43,8 +43,8 @@ empty 0 -8 0 10 #606060 #dfdfdf #dfdfdf 0;
 0;
 #X obj 15 112 nbx 6 20 -10 10 0 0 \$1slider-min-s \$1slider-min-r MIN
 70 10 0 10 #606060 #dfdfdf #606060 0 10;
-#X obj 15 70 cnv 15 143 40 empty \$1slider-scaled-r 0V 10 20 0 20 #606060
-#dfdfdf 0;
+#X obj 15 70 cnv 15 143 40 empty \$1slider-scaled-r 0.185V 10 20 0
+20 #606060 #dfdfdf 0;
 #X obj 117 112 nbx 6 20 -10 10 0 0 \$1slider-max-s \$1slider-max-r
 MAX 70 10 0 10 #606060 #dfdfdf #606060 0 10;
 #X restore 63 123 pd \$1-cvxattenuation;
@@ -211,14 +211,14 @@ MAX 70 10 0 10 #606060 #dfdfdf #606060 0 10;
 #X obj 878 367 / 127;
 #X floatatom 878 392 5 0 0 0 - - - 0;
 #X msg 983 742 label \$1V;
-#X obj 90 12 vsl 20 13 0 127 0 0 \$1xset-s \$1xset-r empty 0 -9 0 10
+#X obj 70 12 vsl 20 13 0 127 0 0 \$1xset-s \$1xset-r empty 0 -9 0 10
 #fcfcfc #202020 #606060 0 0;
-#X obj 90 10 cnv 6 20 20 empty \$1setcavas-r SET 2 10 0 10 #e0e0e0
+#X obj 70 10 cnv 6 20 20 empty \$1setcavas-r SET 2 10 0 10 #e0e0e0
 #606060 0;
 #X obj 9 9 cnv 5 15 2 empty empty empty 20 12 0 14 #e0e0e0 #606060
 0;
-#X obj 13 10 hsl 75 20 0 1 0 0 \$1slider-s \$1slider-r ATTACK 2 10
-0 12 #606060 #dfdfdf #9f9f9f 0 1;
+#X obj 13 10 hsl 55 20 0 1 0 0 \$1slider-s \$1slider-r STEPS 2 10 0
+12 #606060 #dfdfdf #9f9f9f 0 1;
 #X obj 697 591 s \$1-disp-r;
 #X obj 697 517 int;
 #X obj 697 492 * 10000;
@@ -381,6 +381,7 @@ MAX 70 10 0 10 #606060 #dfdfdf #606060 0 10;
 #X msg 217 325 label \$1;
 #X obj 217 302 symbol \$2;
 #X msg 309 249 set 0;
+#X obj 143 235 r \$1-label;
 #X connect 1 0 75 0;
 #X connect 1 1 2 0;
 #X connect 1 2 82 1;
@@ -477,4 +478,5 @@ MAX 70 10 0 10 #606060 #dfdfdf #606060 0 10;
 #X connect 83 0 15 0;
 #X connect 84 0 83 0;
 #X connect 85 0 8 0;
-#X coords 0 -1 1 1 100 20 2 10 10;
+#X connect 86 0 84 0;
+#X coords 0 -1 1 1 80 20 2 10 10;
